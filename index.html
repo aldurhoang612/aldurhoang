@@ -1,24 +1,482 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Aldur Hoang (Nguyen Vu Minh Hoang) — Motion &amp; Graphic Designer Portfolio</title>
+  <meta name="description" content="Portfolio of Aldur Hoang (Nguyen Vu Minh Hoang) — Multidisciplinary Motion &amp; Graphic Designer with 5+ years of experience in Brand Design, E-Commerce, 2D/3D Motion Graphics, and 3D Modeling." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Hello, I'm [Your Name]</h1>
-    <p>Frontend Developer & Designer</p>
+  <!-- Ambient Background Glow -->
+  <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+
+  <!-- Sticky Navigation -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a href="#top" class="brand-logo" aria-label="Aldur Hoang Home">
+        <span class="brand-dot"></span>
+        <span class="brand-text">ALDUR<span class="brand-accent">HOANG</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="#showreel" class="nav-link">Showreel</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#motion-lab" class="nav-link">Motion &amp; 3D Lab</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="btn btn-accent btn-sm">
+          <span>Download CV</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
   </header>
+
   <main>
-    <section id="projects">
-      <h2>Projects</h2>
-      <article>
-        <h3>Project Title</h3>
-        <p>Brief project overview and tech stack used.</p>
-      </article>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="status-pulse"></span>
+            <span>Motion &amp; Graphic Designer · Ho Chi Minh City, VN</span>
+          </div>
+
+          <h1 class="hero-title">
+            Crafting high-impact <span class="text-accent">Brand Visuals</span> &amp; <span class="text-accent">2D/3D Motion</span> that move audiences.
+          </h1>
+
+          <p class="hero-description">
+            Hi, I’m <strong>Aldur Hoang</strong> (Nguyen Vu Minh Hoang) — a Multidisciplinary Motion &amp; Graphic Designer with over <strong>5 years of experience</strong> blending 3 years in brand &amp; e-commerce key visuals with 2+ years in 2D/3D motion graphics, stage visualizers, and 3D character mascots. Now expanding into UX/UI, AI workflows, and creative coding.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-accent">
+              <span>Explore Case Studies</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#showreel" class="btn btn-outline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Watch 2026 Showreel</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">12</span>
+              <span class="stat-label">Featured Case Studies</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">35+</span>
+              <span class="stat-label">Motion &amp; 3D Assets</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Core Disciplines</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-profile-card">
+          <div class="profile-image-wrap">
+            <img src="assets/images/portrait-hoang.jpg" alt="Aldur Hoang — Nguyen Vu Minh Hoang" class="profile-image" loading="eager" />
+            <div class="profile-badge">
+              <span class="badge-tag">CURRENT ROLE</span>
+              <strong>Mid-level Motion Designer @ Shuttlerock</strong>
+            </div>
+          </div>
+          <div class="profile-quick-links">
+            <a href="https://behance.net/balderhoang" target="_blank" rel="noopener" class="chip-link">Behance ↗</a>
+            <a href="https://vimeo.com/aldurhoang" target="_blank" rel="noopener" class="chip-link">Vimeo ↗</a>
+            <a href="https://instagram.com/aldurmove" target="_blank" rel="noopener" class="chip-link">Instagram ↗</a>
+            <a href="mailto:aldurhoang@gmail.com" class="chip-link">Email ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2026 Showreel Section -->
+    <section id="showreel" class="showreel-section">
+      <div class="container">
+        <div class="section-header-inline">
+          <div>
+            <span class="section-eyebrow">FEATURED REEL</span>
+            <h2 class="section-title">2026 Motion &amp; 3D Showreel</h2>
+          </div>
+          <p class="section-subtitle">
+            A curated compilation of 2D/3D motion graphics, commercial ad campaigns, stage LED visualizers, and 3D product animations.
+          </p>
+        </div>
+
+        <div class="showreel-frame">
+          <video
+            id="hero-showreel-video"
+            class="showreel-video"
+            controls
+            playsinline
+            preload="metadata"
+            poster="assets/images/cover-2026.jpg"
+          >
+            <source src="assets/videos/showreel-2026.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
+          </video>
+          <div class="showreel-caption-bar">
+            <div class="showreel-meta">
+              <span class="tag-pill tag-accent">SHOWREEL 2026</span>
+              <span>After Effects · Blender 3D · Cinema/VFX · Commercial Motion</span>
+            </div>
+            <a href="https://vimeo.com/aldurhoang" target="_blank" rel="noopener" class="text-link">
+              Watch HD on Vimeo ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">SELECTED WORKS (2022 – 2026)</span>
+          <h2 class="section-title">Featured Projects &amp; Case Studies</h2>
+          <p class="section-subtitle">
+            Filter by discipline or click any project card to inspect full visual spreads, creative process, and project outcomes.
+          </p>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="controls-bar">
+          <div class="filter-tabs" role="tablist" aria-label="Filter projects by category">
+            <button type="button" class="filter-btn active" data-filter="all">All Works <span class="count-badge" id="count-all">12</span></button>
+            <button type="button" class="filter-btn" data-filter="branding">Branding &amp; Key Visuals <span class="count-badge" id="count-branding">6</span></button>
+            <button type="button" class="filter-btn" data-filter="motion">2D &amp; 3D Motion <span class="count-badge" id="count-motion">2</span></button>
+            <button type="button" class="filter-btn" data-filter="3d">3D Art &amp; Mascots <span class="count-badge" id="count-3d">3</span></button>
+            <button type="button" class="filter-btn" data-filter="photography">Photography <span class="count-badge" id="count-photography">1</span></button>
+          </div>
+
+          <div class="search-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="search" id="project-search" placeholder="Search project, client, or tool..." aria-label="Search projects" />
+          </div>
+        </div>
+
+        <!-- Dynamic Project Grid rendered by script.js -->
+        <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Motion & 3D Video Lab -->
+    <section id="motion-lab" class="motion-lab-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">MOTION &amp; 3D ARCHIVE</span>
+          <h2 class="section-title">Commercial Motion, 3D Clips &amp; Social Reels</h2>
+          <p class="section-subtitle">
+            Hover or tap any video card to play. Featuring short-form performance ads at Shuttlerock, 3D Visual Community pieces, and commercial product TVCs.
+          </p>
+        </div>
+
+        <div class="video-lab-grid">
+          <!-- Video Item 1 -->
+          <article class="video-card">
+            <div class="video-media-wrap">
+              <video class="hover-video" muted loop playsinline preload="metadata" controls>
+                <source src="assets/videos/3d-claw-machine.mp4" type="video/mp4" />
+              </video>
+              <span class="video-badge">3D ANIMATION</span>
+            </div>
+            <div class="video-card-body">
+              <h3>Visual Community — 3D Claw Machine</h3>
+              <p>3D modeling, lighting, physics simulation, and keyframe animation in Blender.</p>
+            </div>
+          </article>
+
+          <!-- Video Item 2 -->
+          <article class="video-card">
+            <div class="video-media-wrap">
+              <video class="hover-video" muted loop playsinline preload="metadata" controls>
+                <source src="assets/videos/3d-astronaut.mp4" type="video/mp4" />
+              </video>
+              <span class="video-badge">3D MOTION</span>
+            </div>
+            <div class="video-card-body">
+              <h3>Visual Community — 3D Astronaut</h3>
+              <p>Stylized 3D character &amp; environment motion study rendered for community showcase.</p>
+            </div>
+          </article>
+
+          <!-- Video Item 3 -->
+          <article class="video-card">
+            <div class="video-media-wrap">
+              <video class="hover-video" muted loop playsinline preload="metadata" controls>
+                <source src="assets/videos/tvc-uvgreen-ka350.mp4" type="video/mp4" />
+              </video>
+              <span class="video-badge">3D PRODUCT TVC</span>
+            </div>
+            <div class="video-card-body">
+              <h3>UVGREEN KA350 Air Purifier TVC</h3>
+              <p>3D product visualization and technical airflow/UV sterilization commercial clip.</p>
+            </div>
+          </article>
+
+          <!-- Video Item 4 -->
+          <article class="video-card">
+            <div class="video-media-wrap">
+              <video class="hover-video" muted loop playsinline preload="metadata" controls>
+                <source src="assets/videos/das500-led.mp4" type="video/mp4" />
+              </video>
+              <span class="video-badge">NFT 3D LED CLIP</span>
+            </div>
+            <div class="video-card-body">
+              <h3>DAS500 — Bạch Đằng Pier LED Booth</h3>
+              <p>3D animated promotional loop displayed on outdoor LED screens in Ho Chi Minh City.</p>
+            </div>
+          </article>
+
+          <!-- Video Item 5 -->
+          <article class="video-card">
+            <div class="video-media-wrap">
+              <video class="hover-video" muted loop playsinline preload="metadata" controls>
+                <source src="assets/videos/motion-lashe-valentine.mp4" type="video/mp4" />
+              </video>
+              <span class="video-badge">2D MOTION AD</span>
+            </div>
+            <div class="video-card-body">
+              <h3>Lashe Valentine — 2D Campaign Motion</h3>
+              <p>Dynamic typography, product compositing, and smooth transitions in After Effects.</p>
+            </div>
+          </article>
+
+          <!-- Video Item 6 -->
+          <article class="video-card">
+            <div class="video-media-wrap">
+              <video class="hover-video" muted loop playsinline preload="metadata" controls>
+                <source src="assets/videos/motion-shuttlerock-1.mp4" type="video/mp4" />
+              </video>
+              <span class="video-badge">9:16 SOCIAL MOTION</span>
+            </div>
+            <div class="video-card-body">
+              <h3>Shuttlerock — Short-Form Performance Ad</h3>
+              <p>High-retention 9:16 social video creative designed for FB/IG/TikTok placements.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience, Education & Skills -->
+    <section id="experience" class="experience-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">CAREER &amp; CAPABILITIES</span>
+          <h2 class="section-title">Experience, Leadership &amp; Skills</h2>
+        </div>
+
+        <div class="experience-bento">
+          <!-- Work Experience Timeline -->
+          <div class="bento-card timeline-card">
+            <h3 class="bento-heading">
+              <span class="accent-dot"></span>
+              Professional Experience
+            </h3>
+
+            <div class="timeline-list">
+              <div class="timeline-item current">
+                <div class="timeline-header">
+                  <div>
+                    <h4>Mid-level Motion Designer</h4>
+                    <span class="timeline-company">Shuttlerock</span>
+                  </div>
+                  <span class="timeline-date">Jul 2024 – Present</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Create concept visuals, style frames, and high-converting branded motion assets for global markets (EN, DE, FR, ZH-TW, VN, TH).</li>
+                  <li>Animate short-form videos across 9:16, 4:5, and 16:9 placements (Meta, TikTok, Hulu), exploring new workflows and sharing best practices.</li>
+                  <li>Experiment with generative AI tools to accelerate ideation and refine visual outputs.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <div>
+                    <h4>Graphic Designer</h4>
+                    <span class="timeline-company">Bloomberg Businessweek Vietnam</span>
+                  </div>
+                  <span class="timeline-date">Nov 2023 – Jun 2024</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Directed Key Visuals and full event collateral for flagship summits including <em>Economy in Focus: The Year Ahead 2024</em> and <em>Wealth Management</em>.</li>
+                  <li>Designed social media campaigns, digital media, and print editorial publications.</li>
+                  <li>Designed and modified E-Magazine web layouts in Figma, collaborating directly with web developers.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <div>
+                    <h4>Design Leader / Chief of Public Image &amp; Advisor</h4>
+                    <span class="timeline-company">Rotaract Club of One Million Lives Saigon</span>
+                  </div>
+                  <span class="timeline-date">Jun 2023 – Jun 2025</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Led the design team, PR communication strategies, and art direction for club initiatives including <em>Cycle 5: Mission Lotus</em> and <em>Giao Autism Children Exhibition</em>.</li>
+                  <li>Served as Design Advisor from June 2024 to June 2025.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <div>
+                    <h4>Graphic Designer</h4>
+                    <span class="timeline-company">DeThird Studio</span>
+                  </div>
+                  <span class="timeline-date">Jun 2022 – Jan 2023</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Developed art direction, 3D modeling/animation, and monthly e-commerce sale Key Visuals for brands such as Gentle Lord Silver Jewelry.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <div>
+                    <h4>Intern Graphic Designer</h4>
+                    <span class="timeline-company">Sociolla &amp; Amardillo Cybertech</span>
+                  </div>
+                  <span class="timeline-date">2018 – 2021</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li><strong>Sociolla (Dec 2020 – May 2021)</strong>: Developed and adapted sale campaign Key Visuals into multi-channel digital assets.</li>
+                  <li><strong>Amardillo Cybertech (Oct 2018 – Jan 2019)</strong>: Designed motion graphics, social media assets, 2D game sprites, and Crypto Wallet UI.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Education + Skills + Tools -->
+          <div class="bento-side-stack">
+            <div class="bento-card">
+              <h3 class="bento-heading">
+                <span class="accent-dot"></span>
+                Education
+              </h3>
+              <div class="edu-block">
+                <h4>Bachelor of Fine Arts (Graphic Design)</h4>
+                <span class="timeline-company">Hoa Sen University · 2018 – 2023</span>
+                <p>Developed strong artistry fundamentals and creative mindset. Led experimental projects involving strategic planning, creative direction, charity branding (<em>Giao Organization</em>), and communication research.</p>
+              </div>
+            </div>
+
+            <div class="bento-card">
+              <h3 class="bento-heading">
+                <span class="accent-dot"></span>
+                Core Disciplines
+              </h3>
+              <div class="skill-tags">
+                <span class="skill-tag">2D &amp; 3D Motion Graphics</span>
+                <span class="skill-tag">Key Visual &amp; Event Art Direction</span>
+                <span class="skill-tag">Brand Identity &amp; Guidelines</span>
+                <span class="skill-tag">3D Modeling &amp; Character Mascots</span>
+                <span class="skill-tag">E-Commerce &amp; Social Campaigns</span>
+                <span class="skill-tag">Stage LED Visualizers</span>
+                <span class="skill-tag">Commercial &amp; Concept Photography</span>
+                <span class="skill-tag">UX/UI Web Layouts</span>
+              </div>
+            </div>
+
+            <div class="bento-card">
+              <h3 class="bento-heading">
+                <span class="accent-dot"></span>
+                Tools &amp; Workflow Stack
+              </h3>
+              <div class="tools-grid">
+                <div class="tool-pill"><strong>After Effects</strong><span>2D/3D Motion &amp; VFX</span></div>
+                <div class="tool-pill"><strong>Blender 3D</strong><span>Modeling, Texturing, Animation</span></div>
+                <div class="tool-pill"><strong>Adobe Suite</strong><span>Photoshop, Illustrator, InDesign</span></div>
+                <div class="tool-pill"><strong>Figma</strong><span>UX/UI Layouts &amp; Flowboards</span></div>
+                <div class="tool-pill"><strong>Generative AI</strong><span>Concept Ideation &amp; Asset Refinement</span></div>
+                <div class="tool-pill"><strong>Leadership</strong><span>Team Mentoring &amp; Art Direction</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-copy">
+            <span class="section-eyebrow">LET’S COLLABORATE</span>
+            <h2 class="contact-title">Ready to bring bold visuals &amp; motion to your next project?</h2>
+            <p class="contact-subtitle">
+              Available for full-time opportunities, freelance motion graphics, 3D modeling, event key visuals, and brand identity projects.
+            </p>
+            <div class="contact-buttons">
+              <a href="mailto:aldurhoang@gmail.com" class="btn btn-accent">
+                <span>aldurhoang@gmail.com</span>
+              </a>
+              <a href="tel:+84901498984" class="btn btn-outline">
+                <span>(+84) 901 498 984</span>
+              </a>
+              <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="btn btn-outline">
+                <span>View 2026 CV (PDF)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://behance.net/balderhoang" target="_blank" rel="noopener" class="social-row">
+              <span>Behance</span>
+              <strong>behance.net/balderhoang ↗</strong>
+            </a>
+            <a href="https://vimeo.com/aldurhoang" target="_blank" rel="noopener" class="social-row">
+              <span>Vimeo</span>
+              <strong>vimeo.com/aldurhoang ↗</strong>
+            </a>
+            <a href="https://instagram.com/aldurmove" target="_blank" rel="noopener" class="social-row">
+              <span>Instagram</span>
+              <strong>instagram.com/aldurmove ↗</strong>
+            </a>
+            <a href="https://fb.com/aldurhoang" target="_blank" rel="noopener" class="social-row">
+              <span>Facebook</span>
+              <strong>fb.com/aldurhoang ↗</strong>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 <strong>Aldur Hoang</strong> (Nguyen Vu Minh Hoang). Crafted with a Black &amp; Electric Yellow theme.</p>
+      <a href="#top" class="back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Case Study Lightbox Modal -->
+  <div id="project-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <button type="button" id="modal-close" class="modal-close-btn" aria-label="Close case study modal">✕</button>
+      <div id="modal-content" class="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1342,15 +1342,21 @@ const FALLBACK_PORTFOLIO_DATA = {
 
 const UI_STRINGS = {
   en: {
-    p3_m_leader: 'LEADER',
+    p3_m_leader: 'INTRO',
     p3_m_reel: 'SHOWREEL',
     p3_m_all: 'ALL WORKS',
     p3_m_stage: 'STAGE LED',
-    p3_m_comm: 'COMMERCIAL',
-    p3_m_brand: 'BRAND & KV',
-    p3_m_3d: '3D & MASCOT',
+    p3_m_comm: '2D MOTION',
+    p3_m_brand: 'KEY VISUALS',
+    p3_m_3d: '3D MOTION',
     p3_m_cv: 'CV & CONTACT',
     p3_m_pdf: 'LOAD CV PDF',
+    hero_speech_bio:
+      'Multidisciplinary Motion Designer with 5 years of experience in brand and e-commerce. Bridging the gap between 2D/3D motion, UX/UI, and AI to create meaningful design solutions.',
+    aboutme_title: 'About me',
+    aboutme_copy:
+      'Motion Graphic Designer with over 5 years of experience — blending 3 years in brand and e-commerce design with 2 years in 2D/3D motion graphics. Driven by curiosity and purpose, I’m now expanding into UX/UI, AI, and coding to craft designs that don’t just look good — but create lasting impact and meaning.',
+    first_up_bubble: "First up,\nlet’s go through\nthese...",
     btn_download_cv: 'DOWNLOAD 2026 CV (PDF) ↗',
     hero_btn_gallery: 'EXPLORE ALL 20 PROJECTS ↓',
     hero_btn_cv: 'CV & CONTACT →',
@@ -1365,8 +1371,8 @@ const UI_STRINGS = {
     cat_3d: '3D Mascots, Editorial & Community',
     lab_heading: 'Commercial Motion, 3D Clips & Social Reels (6 Clips)',
     exp_eyebrow: 'SECTION 03 // FULL CV DOSSIER & COMMISSION CONTACT',
-    exp_heading: 'Curriculum Vitae, Ratecard & Contact',
-    exp_timeline_title: 'Professional Experience (2022 – 2026)',
+    exp_heading: 'ALDURHOANG Curriculum Vitae & Contact',
+    exp_timeline_title: 'Experience (2018 – 2026)',
     edu_title: 'Education',
     skills_motion_title: 'Motion & 3D Stage Visuals',
     skills_brand_title: 'Design, Brand & AI Workflow',
@@ -1382,15 +1388,21 @@ const UI_STRINGS = {
     form_submit: 'SEND MESSAGE ↗'
   },
   vi: {
-    p3_m_leader: 'TRƯỞNG NHÓM',
+    p3_m_leader: 'GIỚI THIỆU',
     p3_m_reel: 'SHOWREEL',
     p3_m_all: '20 DỰ ÁN',
     p3_m_stage: 'STAGE LED',
-    p3_m_comm: 'QUẢNG CÁO',
-    p3_m_brand: 'THƯƠNG HIỆU',
-    p3_m_3d: '3D & MASCOT',
+    p3_m_comm: '2D MOTION',
+    p3_m_brand: 'KEY VISUALS',
+    p3_m_3d: '3D MOTION',
     p3_m_cv: 'CV & LIÊN HỆ',
     p3_m_pdf: 'TẢI CV PDF',
+    hero_speech_bio:
+      'Motion Designer đa lĩnh vực với 5 năm kinh nghiệm trong thương hiệu và thương mại điện tử. Kết nối 2D/3D Motion, UX/UI và AI để tạo nên những giải pháp thiết kế giàu giá trị.',
+    aboutme_title: 'Về tôi',
+    aboutme_copy:
+      'Motion Graphic Designer với hơn 5 năm kinh nghiệm — kết hợp 3 năm thiết kế thương hiệu & e-commerce cùng 2 năm chuyên sâu 2D/3D Motion Graphics. Luôn tò mò và hướng tới giá trị thực, tôi mở rộng sang UX/UI, AI và lập trình để tạo ra những thiết kế không chỉ đẹp mắt mà còn mang lại dấu ấn bền vững.',
+    first_up_bubble: 'Trước tiên,\ncùng điểm qua\ncác mảng này nhé...',
     btn_download_cv: 'TẢI CV 2026 (PDF) ↗',
     hero_btn_gallery: 'XEM TOÀN BỘ 20 DỰ ÁN ↓',
     hero_btn_cv: 'HỒ SƠ CV & LIÊN HỆ →',
@@ -1405,8 +1417,8 @@ const UI_STRINGS = {
     cat_3d: '3D Mascot, Dàn Trang & Cộng Đồng',
     lab_heading: 'Video Motion Thương Mại, 3D Clips & Social Reels (6 Clips)',
     exp_eyebrow: 'PHẦN 03 // HỒ SƠ NĂNG LỰC (CV) & LIÊN HỆ HỢP TÁC',
-    exp_heading: 'Kinh Nghiệm Làm Việc, Bảng Giá & Liên Hệ',
-    exp_timeline_title: 'Kinh Nghiệm Chuyên Môn (2022 – 2026)',
+    exp_heading: 'ALDURHOANG Curriculum Vitae & Liên Hệ',
+    exp_timeline_title: 'Kinh Nghiệm Làm Việc (2018 – 2026)',
     edu_title: 'Học Vấn',
     skills_motion_title: 'Motion & 3D Visual Sân Khấu',
     skills_brand_title: 'Thiết Kế, Thương Hiệu & Quy Trình AI',
@@ -1603,6 +1615,16 @@ p3rFloatItems.forEach((item) => {
 
     if (item.dataset.quickFilter) {
       setCategoryFilter(item.dataset.quickFilter);
+    }
+  });
+});
+
+// Section 1 "MENU" Discipline Ribbons (KEY Visuals, 2D Motion Graphic, 3D Modelling Motion)
+document.querySelectorAll('.discipline-ribbon').forEach((ribbon) => {
+  ribbon.addEventListener('click', () => {
+    const filterCat = ribbon.dataset.ribbonFilter;
+    if (filterCat) {
+      setCategoryFilter(filterCat);
     }
   });
 });

@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALDUR HOANG (Nguyễn Vũ Minh Hoàng) — Motion, Concert Stage Visuals &amp; Brand Systems</title>
-  <meta name="description" content="Portfolio of Aldur Hoang (Nguyễn Vũ Minh Hoàng) — Multidisciplinary Motion Designer specializing in Concert Stage Visuals (9830×2868 LED Mapping), 2D/3D Motion Graphics, and Brand Systems." />
+  <title>ALDURHOANG Portfolio — Nguyễn Vũ Minh Hoàng · Motion, Stage Visuals &amp; Brand Design</title>
+  <meta name="description" content="Portfolio of Aldur Hoang (Nguyễn Vũ Minh Hoàng) — Multidisciplinary Motion Designer with 5+ years of experience in brand, e-commerce, 2D/3D motion graphics, concert stage LED visuals, UX/UI, and AI." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Chakra+Petch:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+JP:wght@500;700;900&family=Oswald:wght@600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Chakra+Petch:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,600;1,400;1,600;1,700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,16 +16,16 @@
        LEFT-SIDE POP-OUT PERSONA 3 RELOAD FLOATING MENU
        (No backdrop blur; page remains 100% interactive while menu is open)
        ===================================================================== -->
-  <aside class="p3r-side-menu-root open" id="left-menu-system" aria-label="Persona 3 Reload Floating Side Menu">
+  <aside class="p3r-side-menu-root" id="left-menu-system" aria-label="Persona 3 Reload Floating Side Menu">
 
     <!-- Left-Edge Trigger Icon Button -->
     <button
       type="button"
       class="p3r-menu-trigger"
       id="left-menu-toggle"
-      aria-expanded="true"
+      aria-expanded="false"
       aria-controls="p3r-popout-menu"
-      title="Toggle Persona Floating Menu"
+      title="Toggle Floating Side Menu"
     >
       <span class="trigger-diamond" aria-hidden="true">◆</span>
       <span class="trigger-bars" aria-hidden="true">
@@ -35,9 +35,9 @@
     </button>
 
     <!-- Directly Pop-Out Floating P3R Menu (Pointer-events pass through empty space!) -->
-    <div class="p3r-popout-menu" id="p3r-popout-menu" aria-hidden="false">
+    <div class="p3r-popout-menu" id="p3r-popout-menu" aria-hidden="true">
 
-      <!-- Left Vertical Stencil Edge Accent ("MAIN" + Yen Box from Image 1) -->
+      <!-- Left Vertical Stencil Edge Accent ("MAIN" + Yen Box) -->
       <div class="p3r-menu-left-wing" aria-hidden="true">
         <div class="p3r-yen-tag">
           <strong>¥ 2026</strong>
@@ -46,66 +46,66 @@
         <div class="p3r-vertical-stencil">MAIN</div>
       </div>
 
-      <!-- Floating 3D-Tilted Stacked Menu Words (Exact P3R Style from Uploaded Images 1 & 2) -->
-      <nav class="p3r-floating-stack" aria-label="Persona 3 Reload Floating Command Stack">
+      <!-- Floating 3D-Tilted Stacked Menu Words -->
+      <nav class="p3r-floating-stack" aria-label="Persona Floating Command Stack">
 
-        <!-- 1. LEADER / HERO -->
+        <!-- 1. INTRO / PORTFOLIO -->
         <a href="#sec-hero" class="p3r-float-item active" data-sec="sec-hero" data-tone="cyan-bright" style="--stagger: 12px; --rot: -10deg;">
           <span class="p3r-white-shard" aria-hidden="true"></span>
-          <span class="p3r-word" data-text="LEADER" data-i18n="p3_m_leader">LEADER</span>
+          <span class="p3r-word" data-i18n="p3_m_leader">INTRO</span>
         </a>
 
         <!-- 2. SHOWREEL -->
         <a href="#hero-showreel-dock" class="p3r-float-item" data-sec="hero-showreel-dock" data-tone="ice-white" style="--stagger: 26px; --rot: -7deg;">
           <span class="p3r-white-shard" aria-hidden="true"></span>
-          <span class="p3r-word" data-text="SHOWREEL" data-i18n="p3_m_reel">SHOWREEL</span>
+          <span class="p3r-word" data-i18n="p3_m_reel">SHOWREEL</span>
         </a>
 
         <!-- 3. ALL WORKS (SECTION 2 GALLERY) -->
         <a href="#sec-gallery" class="p3r-float-item" data-sec="sec-gallery" data-quick-filter="all" data-tone="cyan-mid" style="--stagger: 8px; --rot: -9deg;">
           <span class="p3r-white-shard" aria-hidden="true"></span>
-          <span class="p3r-word" data-text="ALL WORKS" data-i18n="p3_m_all">ALL WORKS</span>
+          <span class="p3r-word" data-i18n="p3_m_all">ALL WORKS</span>
         </a>
 
-        <!-- 4. STAGE LED (FILTER) -->
-        <a href="#sec-gallery" class="p3r-float-item" data-quick-filter="stage-visuals" data-tone="ice-white" style="--stagger: 30px; --rot: -5deg;">
+        <!-- 4. KEY VISUALS (FILTER) -->
+        <a href="#sec-gallery" class="p3r-float-item" data-quick-filter="brand-identity" data-tone="ice-white" style="--stagger: 30px; --rot: -5deg;">
           <span class="p3r-white-shard" aria-hidden="true"></span>
-          <span class="p3r-word" data-text="STAGE LED" data-i18n="p3_m_stage">STAGE LED</span>
+          <span class="p3r-word" data-i18n="p3_m_brand">KEY VISUALS</span>
         </a>
 
-        <!-- 5. MOTION & OOH (FILTER) -->
-        <a href="#sec-gallery" class="p3r-float-item" data-quick-filter="commercial-motion" data-tone="cyan-deep" style="--stagger: 18px; --rot: -8deg;">
+        <!-- 5. 2D/STAGE MOTION (FILTER) -->
+        <a href="#sec-gallery" class="p3r-float-item" data-quick-filter="stage-visuals" data-tone="cyan-deep" style="--stagger: 18px; --rot: -8deg;">
           <span class="p3r-white-shard" aria-hidden="true"></span>
-          <span class="p3r-word" data-text="COMMERCIAL" data-i18n="p3_m_comm">COMMERCIAL</span>
+          <span class="p3r-word" data-i18n="p3_m_stage">STAGE LED</span>
         </a>
 
-        <!-- 6. BRAND & KV (FILTER) -->
-        <a href="#sec-gallery" class="p3r-float-item" data-quick-filter="brand-identity" data-tone="cyan-bright" style="--stagger: 4px; --rot: -6deg;">
+        <!-- 6. COMMERCIAL MOTION (FILTER) -->
+        <a href="#sec-gallery" class="p3r-float-item" data-quick-filter="commercial-motion" data-tone="cyan-bright" style="--stagger: 4px; --rot: -6deg;">
           <span class="p3r-white-shard" aria-hidden="true"></span>
-          <span class="p3r-word" data-text="BRAND & KV" data-i18n="p3_m_brand">BRAND &amp; KV</span>
+          <span class="p3r-word" data-i18n="p3_m_comm">2D MOTION</span>
         </a>
 
-        <!-- 7. 3D & MASCOT (FILTER) -->
+        <!-- 7. 3D MODELLING & MASCOT (FILTER) -->
         <a href="#sec-gallery" class="p3r-float-item" data-quick-filter="3d-editorial-community" data-tone="ice-white" style="--stagger: 22px; --rot: -4deg;">
           <span class="p3r-white-shard" aria-hidden="true"></span>
-          <span class="p3r-word" data-text="3D & MASCOT" data-i18n="p3_m_3d">3D &amp; MASCOT</span>
+          <span class="p3r-word" data-i18n="p3_m_3d">3D MOTION</span>
         </a>
 
         <!-- 8. CV & CONTACT (SECTION 3) -->
         <a href="#sec-cv-contact" class="p3r-float-item" data-sec="sec-cv-contact" data-tone="cyan-bright" style="--stagger: 14px; --rot: -3deg;">
           <span class="p3r-white-shard" aria-hidden="true"></span>
-          <span class="p3r-word" data-text="CV & CONTACT" data-i18n="p3_m_cv">CV &amp; CONTACT</span>
+          <span class="p3r-word" data-i18n="p3_m_cv">CV &amp; CONTACT</span>
         </a>
 
-        <!-- 9. SYSTEM / CV PDF -->
+        <!-- 9. LOAD CV PDF -->
         <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="p3r-float-item" data-tone="cyan-deep" style="--stagger: 28px; --rot: 2deg;">
           <span class="p3r-white-shard" aria-hidden="true"></span>
-          <span class="p3r-word" data-text="LOAD CV PDF" data-i18n="p3_m_pdf">LOAD CV PDF</span>
+          <span class="p3r-word" data-i18n="p3_m_pdf">LOAD CV PDF</span>
         </a>
 
       </nav>
 
-      <!-- Compact Floating Utility Pills (EN/VI + BGM Toggle) Under the Stack -->
+      <!-- Compact Floating Utility Pills (EN/VI + BGM Toggle) -->
       <div class="p3r-float-utilities">
         <div class="lang-switch-pill" role="group" aria-label="Language Switcher">
           <button type="button" class="lang-btn active" data-lang="en">EN</button>
@@ -125,220 +125,199 @@
   </aside>
 
   <!-- =====================================================================
-       SECTION 1: BASIC INFO, INTRO & FEATURED SHOWREEL
-       (Exact Persona 3 Reload LEADER Status Screen Style)
+       SECTION 1: ALDURHOANG PORTFOLIO COVER, BIO INTRO, MENU & SHOWREEL
+       (Faithfully matching the 3 uploaded Portfolio Pages:
+        1. Đông Sơn Bronze Drum Halftone on Electric Blue + ALDURHOANG Portfolio
+        2. Neon Yellow Halftone Portrait Card + Comic Speech Bubble Bio + About Me
+        3. Giant Vertical MENU + Blue Line-Art Illustration + KEY Visuals /
+           2D Motion Graphic / 3D Modelling Motion Ribbons + Featured Showreel)
        ===================================================================== -->
-  <section id="sec-hero" class="p3r-hero-section" aria-label="Section 1: Basic Info, Intro and Featured Showreel">
-    <div class="p3r-stage">
+  <section id="sec-hero" class="aldur-hero-section" aria-label="Section 1: Aldur Hoang Portfolio Intro and Showreel">
 
-      <!-- Deep Cobalt & Cyan Persona 3 Reload Geometric Wave Background -->
-      <div class="p3r-bg-waves" aria-hidden="true">
-        <div class="p3r-wave-circle c1"></div>
-        <div class="p3r-wave-circle c2"></div>
-        <div class="p3r-diagonal-blue-shard"></div>
-        <div class="p3r-halftone-grid"></div>
-      </div>
-
-      <!-- TOP-LEFT "<LB ○ • • • • • • • RB>" NAVIGATION INDICATOR -->
-      <div class="p3r-top-lb-rb">
-        <button type="button" class="p3r-lb-btn" id="p3r-prev-tab" aria-label="Switch Hero View">
-          <span class="red-chevron">&lt;</span><strong>LB</strong>
-        </button>
-        <div class="p3r-dots-track" role="tablist" aria-label="Hero Info Dots">
-          <button type="button" class="p3r-dot active" data-hero-slide="0" aria-label="Profile & Showreel"></button>
-          <button type="button" class="p3r-dot" data-hero-slide="1" aria-label="Concert Stage Visuals"></button>
-          <button type="button" class="p3r-dot" data-hero-slide="2" aria-label="Commercial Motion & Brand"></button>
-        </div>
-        <button type="button" class="p3r-rb-btn" id="p3r-next-tab" aria-label="Next Hero View">
-          <strong>RB</strong><span class="red-chevron">&gt;</span>
-        </button>
-
-        <!-- Quick Top EN/VI Switcher -->
-        <div class="p3r-top-quick-pills">
+    <!-- PART 1A: UPLOADED PAGE 1 — ELECTRIC BLUE ĐÔNG SƠN BRONZE DRUM & "ALDURHOANG Portfolio" COVER -->
+    <div class="aldur-cover-banner">
+      <!-- Top Quick Language & CV Pill Bar -->
+      <div class="aldur-cover-Controls">
+        <div class="lang-switch-pill" role="group" aria-label="Quick Language Switcher">
           <button type="button" class="lang-btn active" data-lang="en">EN</button>
           <button type="button" class="lang-btn" data-lang="vi">VI</button>
         </div>
-      </div>
-
-      <!-- TOP-RIGHT SKEWED PILLS: [LT] THEURGIA (SHOWREEL) / PERSONA [RT] (GALLERY) -->
-      <div class="p3r-top-right-ability-tags">
-        <a href="#hero-showreel-dock" class="p3r-ability-pill pill-theurgia">
-          <span class="pill-key">LT</span>
-          <div class="pill-text">
-            <strong>THEURGIA</strong>
-            <small>テウルギア · SHOWREEL 2026</small>
-          </div>
-        </a>
-        <a href="#sec-gallery" class="p3r-ability-pill pill-persona">
-          <div class="pill-text">
-            <strong>PERSONA</strong>
-            <small>ペルソナ · 20 PROJECTS</small>
-          </div>
-          <span class="pill-key">RT</span>
+        <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="cover-cv-pill">
+          CURRICULUM VITAE (PDF) ↗
         </a>
       </div>
 
-      <!-- GIANT DIAGONAL WHITE & BLACK PERSONA 3 RELOAD STATUS RIBBON -->
-      <div class="p3r-diagonal-ribbon-wrap">
-        <div class="p3r-diagonal-ribbon">
+      <!-- Halftone Đông Sơn Bronze Drum Semicircle Image from Uploaded Page 1 -->
+      <div class="dongson-drum-wrap" aria-hidden="true">
+        <img
+          src="assets/images/hero-dongson-cover.jpg"
+          alt="Đông Sơn Bronze Drum Halftone Pattern — Aldur Hoang Portfolio"
+          class="dongson-cover-img"
+        />
+      </div>
 
-          <!-- Giant ":3" Cutout Number on Far Left -->
-          <div class="p3r-giant-number" aria-hidden="true">3</div>
+      <!-- Exact Dual-Font Title Lockup: Neon Yellow "ALDURHOANG" + Overlapping White Italic Serif "Portfolio" -->
+      <div class="aldur-cover-title-lockup">
+        <h1 class="lockup-brand-sans">ALDURHOANG</h1>
+        <span class="lockup-portfolio-serif">Portfolio</span>
+      </div>
+    </div>
 
-          <!-- Inner Black Skewed Top Bar: Name, /PLV 26, HP 20/20 (Cyan), SP 9830/2868 (Yellow-Green), NEXT EXP -->
-          <div class="p3r-black-stat-strip">
-            <div class="p3r-char-name-block">
-              <span class="p3r-jp-tag">グエン・ヴー・ミン・ホアン</span>
-              <h1 class="p3r-main-name">ALDUR HOANG <small>Nguyễn Vũ Minh Hoàng</small></h1>
-            </div>
+    <!-- PART 1B: UPLOADED PAGES 2 & 3 — NEON-YELLOW HALFTONE PORTRAIT + "MENU / First up, let's go through these..." -->
+    <div class="container aldur-intro-spread">
 
-            <div class="p3r-plv-block">
-              <span class="plv-slash">/</span>
-              <span class="plv-label">PLV</span>
-              <strong class="plv-val">26</strong>
-              <div class="next-exp-row">
-                <span>EXP YEARS</span>
-                <strong>5,809 <small>(5+ YRS)</small></strong>
-              </div>
-            </div>
-
-            <div class="p3r-hp-sp-bars">
-              <div class="p3r-gauge">
-                <div class="gauge-nums"><strong>20</strong><small>/20</small></div>
-                <div class="gauge-bar bar-hp"><span></span></div>
-                <span class="gauge-lbl">HP · PROJECTS</span>
-              </div>
-              <div class="p3r-gauge">
-                <div class="gauge-nums"><strong>9830</strong><small>/2868</small></div>
-                <div class="gauge-bar bar-sp"><span></span></div>
-                <span class="gauge-lbl">SP · LED SPEC</span>
-              </div>
-            </div>
+      <!-- LEFT COLUMN (UPLOADED PAGE 2 + CV ABOUT ME): NEON-YELLOW HALFTONE PORTRAIT & SPEECH BUBBLE -->
+      <div class="aldur-portrait-column">
+        <article class="aldur-yellow-portrait-card">
+          <div class="halftone-portrait-stage">
+            <img
+              src="assets/images/hero-halftone-portrait.jpg"
+              alt="Aldur Hoang (Nguyễn Vũ Minh Hoàng) — Blue &amp; Yellow Halftone Portrait"
+              class="halftone-portrait-img"
+            />
           </div>
 
-          <!-- Main White Diagonal Info Area: Cyan Diamond + Role + Orange Attack Shard + Stats + Intro Bio -->
-          <div class="p3r-white-info-band">
-            <div class="p3r-arcana-role-row">
-              <span class="p3r-cyan-gem" aria-hidden="true"></span>
-              <span class="p3r-arcana-kanji">節制</span>
-              <span class="p3r-lv-text">Lv<strong>30</strong></span>
-              <strong class="p3r-role-headline" id="hero-role-text">
-                MULTIDISCIPLINARY MOTION DESIGNER
-              </strong>
-            </div>
-
-            <div class="p3r-attack-stats-row">
-              <div class="p3r-orange-shard">
-                <span class="shard-lbl">SPECIALTY</span>
-                <strong class="shard-kanji">映像・舞台・3D</strong>
-              </div>
-              <div class="p3r-atk-def-nums">
-                <span class="stat-pair">STAGE LED • <strong>9830×2868</strong></span>
-                <span class="stat-pair">MOTION &amp; 3D • <strong>138</strong></span>
-                <span class="stat-pair">BRAND KV • <strong>122</strong></span>
-              </div>
-            </div>
-
-            <p class="p3r-intro-bio" id="hero-bio-text">
-              5+ years crafting arena-scale Concert Stage LED Visuals (Dân Chơi Dân Ca, ATVNCG, DIFF 2026), 2D/3D Commercial Motion (Shuttlerock, Goofi Team), and Brand Identity Systems (Bloomberg Businessweek VN, FLOW Ecosystem) in Ho Chi Minh City.
+          <!-- Overlay Live HTML Speech Bubble matching Page 2 exactly for crisp text & EN/VI switching -->
+          <div class="portrait-speech-box">
+            <span class="speech-pointer-up" aria-hidden="true"></span>
+            <p id="hero-speech-bio" data-i18n="hero_speech_bio">
+              Multidisciplinary Motion Designer with 5 years of experience in brand and e-commerce. Bridging the gap between 2D/3D motion, UX/UI, and AI to create meaningful design solutions.
             </p>
-
-            <div class="p3r-hero-cta-row">
-              <a href="#sec-gallery" class="p3r-cta-btn btn-primary-blue">
-                <span data-i18n="hero_btn_gallery">EXPLORE ALL 20 PROJECTS ↓</span>
-              </a>
-              <a href="#sec-cv-contact" class="p3r-cta-btn btn-dark-outline">
-                <span data-i18n="hero_btn_cv">CV &amp; CONTACT →</span>
-              </a>
-              <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="p3r-cta-btn btn-red-tag">
-                <span>CV PDF ↗</span>
-              </a>
-            </div>
           </div>
+        </article>
 
-        </div>
-      </div>
-
-      <!-- RIGHT SIDE: MONOCHROME PORTRAIT WITH GLOWING CYAN EYES + CYAN ECHO + RED-CHECKERED "LEADER" BADGE -->
-      <div class="p3r-character-column">
-        <div class="p3r-portrait-frame">
-          <img src="assets/images/portrait-hoang.jpg" alt="" class="p3r-portrait-echo" aria-hidden="true" id="p3r-echo-img" />
-          <img src="assets/images/portrait-hoang.jpg" alt="Aldur Hoang (Nguyễn Vũ Minh Hoàng) — Leader Portrait" class="p3r-portrait-main" id="p3r-main-img" />
-          <div class="p3r-cyan-iris-glow" aria-hidden="true"></div>
-        </div>
-
-        <button type="button" class="p3r-leader-badge" id="p3r-cycle-portrait-btn" title="Click to switch character / portrait view">
-          <span class="leader-checkers" aria-hidden="true">
-            <i class="c-red"></i><i></i>
-            <i></i><i class="c-red"></i>
-          </span>
-          <span class="leader-word">LEADER</span>
-        </button>
-      </div>
-
-      <!-- FEATURED SHOWREEL DOCK EMBEDDED IN SECTION 1 -->
-      <div id="hero-showreel-dock" class="p3r-showreel-dock">
-        <div class="p3r-reel-container">
-          <div class="p3r-reel-header">
-            <div class="p3r-reel-title-group">
-              <span class="p3r-theurgia-tag">THEURGIA // FEATURED SHOWREEL</span>
-              <h2 data-i18n="reel_heading">2026 Motion &amp; Concert Stage Visuals Showreel</h2>
-            </div>
-
-            <div class="p3r-reel-switches">
-              <button type="button" class="reel-mode-btn active" id="reel-btn-local">LOCAL MP4 REEL</button>
-              <button type="button" class="reel-mode-btn" id="reel-btn-yt">YOUTUBE EMBED</button>
-              <a href="https://youtu.be/lToSXfzFkKI" target="_blank" rel="noopener" class="reel-ext-chip">YouTube ↗</a>
-              <a href="https://vimeo.com/aldurhoang" target="_blank" rel="noopener" class="reel-ext-chip">Vimeo ↗</a>
-            </div>
-          </div>
-
-          <div class="p3r-reel-player-box">
-            <div id="reel-local-wrap">
-              <video
-                id="hero-showreel-video"
-                class="showreel-video"
-                controls
-                playsinline
-                preload="metadata"
-                poster="assets/images/cover-2026.jpg"
-              >
-                <source src="assets/videos/showreel-2026.mp4" type="video/mp4" />
-                Your browser does not support HTML5 video.
-              </video>
-            </div>
-
-            <div id="reel-yt-wrap" class="reel-yt-wrap" hidden>
-              <iframe
-                id="reel-yt-iframe"
-                class="showreel-yt-iframe"
-                src=""
-                data-src="https://www.youtube.com/embed/lToSXfzFkKI?rel=0"
-                title="Aldur Hoang Motion &amp; Stage Visuals Showreel"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-
-          <div class="p3r-reel-footer">
-            <span>After Effects · Blender 3D · Concert MapLED 9830×2868 · SkyLED 3464×288 · Brand Systems</span>
-            <span>HO CHI MINH CITY, VIETNAM · aldurhoang@gmail.com</span>
+        <!-- Tilted Neon-Yellow "About me" Card from Aldur Hoang CV 2026 PDF -->
+        <div class="aldur-aboutme-note">
+          <h2 class="aboutme-heading" data-i18n="aboutme_title">About me</h2>
+          <p id="hero-aboutme-copy" data-i18n="aboutme_copy">
+            Motion Graphic Designer with over 5 years of experience — blending 3 years in brand and e-commerce design with 2 years in 2D/3D motion graphics. Driven by curiosity and purpose, I’m now expanding into UX/UI, AI, and coding to craft designs that don’t just look good — but create lasting impact and meaning.
+          </p>
+          <div class="aboutme-meta-badges">
+            <span>Nguyễn Vũ Minh Hoàng</span>
+            <span>Ho Chi Minh City, VN</span>
+            <span>Shuttlerock · Goofi Team · BBWV</span>
           </div>
         </div>
       </div>
 
-      <!-- BOTTOM-RIGHT PERSONA 3 RELOAD STATUS GUIDE PROMPT -->
-      <div class="p3r-bottom-guide" aria-hidden="true">
-        <div class="guide-question">誰のステータスを確認する？</div>
-        <div class="guide-buttons">
-          <span><strong>✚</strong> 人間パラメータ</span>
-          <span><strong>ⓧ</strong> パーティ変更</span>
-          <span><strong>ⓑ</strong> 戻る</span>
+      <!-- RIGHT COLUMN (UPLOADED PAGE 3): GIANT VERTICAL "MENU" + LINE-ART CHARACTER + 3 TILTED RIBBONS -->
+      <div class="aldur-menu-board-card">
+        <!-- Yellow Halftone Dot Accent Texture -->
+        <div class="menu-board-halftone" aria-hidden="true"></div>
+
+        <!-- Giant Vertical Electric-Blue "MENU" along Left Margin -->
+        <div class="menu-board-vertical-word" aria-hidden="true">MENU</div>
+
+        <!-- Center Blue Line-Art Character Artwork from Uploaded Page 3 -->
+        <div class="menu-board-character-wrap">
+          <img
+            src="assets/images/hero-menu-lineart.jpg"
+            alt="Aldur Hoang Blue Line-Art Illustration — First up, let's go through these..."
+            class="menu-lineart-full-img"
+          />
+        </div>
+
+        <!-- Interactive Overlay Content: Oval Speech Bubble + 3 Clickable Skewed Category Ribbons -->
+        <div class="menu-board-interactive-column">
+          <!-- Oval Blue-Outlined Comic Speech Bubble -->
+          <div class="first-up-oval-bubble">
+            <p data-i18n="first_up_bubble">
+              First up,<br />let’s go through<br />these...
+            </p>
+          </div>
+
+          <!-- 3 Stacked Tilted Category Ribbons (Click any ribbon to filter & scroll to Section 2 Gallery!) -->
+          <div class="aldur-discipline-ribbons" role="navigation" aria-label="Core Portfolio Disciplines">
+
+            <!-- RIBBON 1: KEY Visuals (Neon Yellow Ribbon with Top-Right Flag Notch) -->
+            <a href="#sec-gallery" class="discipline-ribbon ribbon-yellow" data-ribbon-filter="brand-identity">
+              <span class="ribbon-flag-notch" aria-hidden="true"></span>
+              <div class="ribbon-lockup">
+                <strong class="ribbon-sans-blue">KEY</strong>
+                <em class="ribbon-serif-white-outline">Visuals</em>
+              </div>
+              <small class="ribbon-count-tag">Brand, Summits &amp; KVs (6) →</small>
+            </a>
+
+            <!-- RIBBON 2: 2D Motion Graphic (Deep Ink Black Ribbon) -->
+            <a href="#sec-gallery" class="discipline-ribbon ribbon-black" data-ribbon-filter="stage-visuals">
+              <div class="ribbon-lockup">
+                <strong class="ribbon-sans-yellow">2D Motion</strong>
+                <em class="ribbon-serif-white">Graphic</em>
+              </div>
+              <small class="ribbon-count-tag">Stage LED 9830×2868 &amp; Ads (10) →</small>
+            </a>
+
+            <!-- RIBBON 3: 3D Modelling Motion (Electric Ultramarine Blue Ribbon) -->
+            <a href="#sec-gallery" class="discipline-ribbon ribbon-blue" data-ribbon-filter="3d-editorial-community">
+              <div class="ribbon-lockup">
+                <strong class="ribbon-sans-yellow">3D Modelling</strong>
+                <em class="ribbon-serif-white">Motion</em>
+              </div>
+              <small class="ribbon-count-tag">Blender 3D, Mascots &amp; VFX (4) →</small>
+            </a>
+
+          </div>
         </div>
       </div>
 
     </div>
+
+    <!-- PART 1C: FEATURED 2026 SHOWREEL DOCK IN SECTION 1 -->
+    <div id="hero-showreel-dock" class="container aldur-showreel-dock">
+      <div class="aldur-reel-card">
+        <div class="aldur-reel-header">
+          <div class="reel-lockup-group">
+            <span class="reel-badge-yellow">FEATURED REEL // 2024 – 2026</span>
+            <h2 class="reel-dual-title">
+              <strong class="r-sans">SHOWREEL</strong>
+              <em class="r-serif">Motion &amp; Stage Visuals</em>
+            </h2>
+          </div>
+
+          <div class="p3r-reel-switches">
+            <button type="button" class="reel-mode-btn active" id="reel-btn-local">LOCAL MP4 REEL</button>
+            <button type="button" class="reel-mode-btn" id="reel-btn-yt">YOUTUBE EMBED</button>
+            <a href="https://youtu.be/lToSXfzFkKI" target="_blank" rel="noopener" class="reel-ext-chip">YouTube ↗</a>
+            <a href="https://vimeo.com/aldurhoang" target="_blank" rel="noopener" class="reel-ext-chip">Vimeo ↗</a>
+          </div>
+        </div>
+
+        <div class="p3r-reel-player-box">
+          <div id="reel-local-wrap">
+            <video
+              id="hero-showreel-video"
+              class="showreel-video"
+              controls
+              playsinline
+              preload="metadata"
+              poster="assets/images/cover-2026.jpg"
+            >
+              <source src="assets/videos/showreel-2026.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+
+          <div id="reel-yt-wrap" class="reel-yt-wrap" hidden>
+            <iframe
+              id="reel-yt-iframe"
+              class="showreel-yt-iframe"
+              src=""
+              data-src="https://www.youtube.com/embed/lToSXfzFkKI?rel=0"
+              title="Aldur Hoang Motion &amp; Stage Visuals Showreel"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="p3r-reel-footer">
+          <span>After Effects · Blender 3D · Concert MapLED 9830×2868 · SkyLED 3464×288 · Brand Systems</span>
+          <span>HO CHI MINH CITY, VIETNAM · aldurhoang@gmail.com</span>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- =====================================================================
@@ -493,7 +472,7 @@
       <div class="sec-header-block">
         <div>
           <span class="p3r-eyebrow-tag" data-i18n="exp_eyebrow">SECTION 03 // FULL CV DOSSIER &amp; COMMISSION CONTACT</span>
-          <h2 class="sec-main-title" data-i18n="exp_heading">Curriculum Vitae, Ratecard &amp; Contact</h2>
+          <h2 class="sec-main-title" data-i18n="exp_heading">ALDURHOANG Curriculum Vitae &amp; Contact</h2>
         </div>
         <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="p3r-cta-btn btn-primary-blue">
           <span data-i18n="btn_download_cv">Download 2026 CV (PDF) ↗</span>
@@ -505,21 +484,21 @@
         <div class="bento-card timeline-card">
           <h3 class="bento-heading">
             <span class="accent-dot"></span>
-            <span data-i18n="exp_timeline_title">Professional Experience (2022 – 2026)</span>
+            <span data-i18n="exp_timeline_title">Experience (2018 – 2026)</span>
           </h3>
           <div class="timeline-list" id="timeline-list"></div>
         </div>
 
         <div class="bento-side-stack">
-          <div class="bento-card">
+          <div class="bento-card cv-yellow-accent-card">
             <h3 class="bento-heading">
               <span class="accent-dot"></span>
               <span data-i18n="edu_title">Education</span>
             </h3>
             <div class="edu-block">
-              <h4>Bachelor of Graphic Design (Good)</h4>
+              <h4>Bachelor of Fine Arts (Graphic Design)</h4>
               <span class="timeline-company">Hoa Sen University · Graduated May 2024</span>
-              <p>Developed strong artistry fundamentals and creative mindset. Led experimental projects involving strategic planning, creative direction, charity branding (<em>Giao Organization</em>), and communication research.</p>
+              <p>Developed artistry skills and creative mindset. Led and contributed to experimental projects; involved in strategy, creative direction, and communication research.</p>
             </div>
           </div>
 
@@ -590,6 +569,10 @@
               <span>Instagram</span>
               <strong>instagram.com/aldurmove ↗</strong>
             </a>
+            <a href="https://fb.com/aldurhoang" target="_blank" rel="noopener" class="social-row">
+              <span>Facebook</span>
+              <strong>fb.com/aldurhoang ↗</strong>
+            </a>
             <a href="https://github.com/aldurhoang612" target="_blank" rel="noopener" class="social-row">
               <span>GitHub</span>
               <strong>github.com/aldurhoang612 ↗</strong>
@@ -601,7 +584,7 @@
         <div class="contact-form-box">
           <div class="form-win-header">
             <span>✉ SEND COMMISSION BRIEF // DIRECT INQUIRY</span>
-            <span aria-hidden="true">◆ P3R</span>
+            <span aria-hidden="true">◆ ALDUR</span>
           </div>
           <form id="commission-form" class="commission-form" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
@@ -642,7 +625,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 <strong>Aldur Hoang</strong> (Nguyễn Vũ Minh Hoàng) · Persona 3 Reload Status UI &amp; Interactive Portfolio.</p>
+      <p>© 2026 <strong>Aldur Hoang</strong> (Nguyễn Vũ Minh Hoàng) · ALDURHOANG Portfolio.</p>
       <a href="#sec-hero" class="back-to-top">Back to Top ↑</a>
     </div>
   </footer>

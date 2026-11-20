@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ALDUR HOANG (Nguyễn Vũ Minh Hoàng) — Motion, Concert Stage Visuals &amp; Brand Systems</title>
-  <meta name="description" content="Interactive Portfolio of Aldur Hoang (Nguyễn Vũ Minh Hoàng) — Multidisciplinary Motion Designer specializing in Concert Stage Visuals (9830×2868 LED Mapping), 2D/3D Motion Graphics, and Brand Identity Systems. Styled in Persona 5 &amp; Zenless Zone Zero UI." />
+  <meta name="description" content="Portfolio of Aldur Hoang (Nguyễn Vũ Minh Hoàng) — Multidisciplinary Motion Designer specializing in Concert Stage Visuals (9830×2868 LED Mapping), 2D/3D Motion Graphics, and Brand Systems." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Chakra+Petch:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+JP:wght@500;700;900&family=Oswald:wght@600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -13,311 +13,324 @@
 <body>
 
   <!-- =====================================================================
-       STICKY TOP GAME-HUD NAVBAR WITH EN / VI BILINGUAL TOGGLE
+       LEFT-SIDE COLLAPSIBLE PERSONA MENU TOGGLE & DRAWER
        ===================================================================== -->
-  <header class="floating-hud-nav" aria-label="Primary Portfolio Navigation">
-    <div class="hud-nav-inner">
-      <a href="#zzz-hub" class="hud-brand-pill">
-        <span class="hud-rabbit-icon" aria-hidden="true">🐰</span>
-        <span>ALDUR HOANG <small class="hud-sub-domain">// EWW.ALDURHOANG.INK</small></span>
-      </a>
+  <aside class="left-menu-system" id="left-menu-system" aria-label="Left Side Portfolio Menu">
+    <!-- Fixed Left-Edge Toggle Trigger Button -->
+    <button
+      type="button"
+      class="left-menu-toggle"
+      id="left-menu-toggle"
+      aria-expanded="false"
+      aria-controls="left-menu-drawer"
+      title="Toggle Navigation Menu"
+    >
+      <span class="toggle-bars" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+      <span class="toggle-label">MENU</span>
+    </button>
 
-      <nav class="hud-section-links" aria-label="Section Navigation">
-        <a href="#zzz-hub" class="hud-link active" data-sec="zzz-hub" data-i18n="nav_lobby">01 · GOLD MEMBER</a>
-        <a href="#p5-command" class="hud-link" data-sec="p5-command" data-i18n="nav_work">02 · P5 COMMAND &amp; WORK</a>
-        <a href="#showreel" class="hud-link" data-sec="showreel" data-i18n="nav_reel">03 · SHOWREEL</a>
-        <a href="#p5-confidant" class="hud-link" data-sec="p5-confidant" data-i18n="nav_about">04 · P5 CONFIDANT</a>
-        <a href="#contact" class="hud-link" data-sec="contact" data-i18n="nav_contact">05 · CONTACT</a>
+    <!-- Slide-Out Left Persona Command Drawer -->
+    <div class="left-menu-drawer" id="left-menu-drawer" aria-hidden="true">
+      <div class="drawer-header">
+        <div class="drawer-brand">
+          <span class="drawer-diamond" aria-hidden="true">◆</span>
+          <div>
+            <strong>ALDUR HOANG</strong>
+            <small>PERSONA SYSTEM // 2026</small>
+          </div>
+        </div>
+        <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">✕</button>
+      </div>
+
+      <!-- 3 Main Sections Navigation -->
+      <nav class="drawer-nav" aria-label="3 Main Sections">
+        <span class="drawer-group-title" data-i18n="menu_sections_label">MAIN SECTIONS (3)</span>
+
+        <a href="#sec-hero" class="drawer-link active" data-sec="sec-hero">
+          <span class="drawer-num">01</span>
+          <div class="drawer-link-copy">
+            <strong data-i18n="nav_s1_title">INFO &amp; SHOWREEL</strong>
+            <small>LEADER STATUS · 2026 REEL</small>
+          </div>
+        </a>
+
+        <a href="#sec-gallery" class="drawer-link" data-sec="sec-gallery">
+          <span class="drawer-num">02</span>
+          <div class="drawer-link-copy">
+            <strong data-i18n="nav_s2_title">PROJECT GALLERY</strong>
+            <small>ALL 20 WORKS &amp; MOTION CLIPS</small>
+          </div>
+        </a>
+
+        <a href="#sec-cv-contact" class="drawer-link" data-sec="sec-cv-contact">
+          <span class="drawer-num">03</span>
+          <div class="drawer-link-copy">
+            <strong data-i18n="nav_s3_title">CV &amp; CONTACT</strong>
+            <small>EXPERIENCE · SKILLS · FORM</small>
+          </div>
+        </a>
       </nav>
 
-      <div class="hud-right-actions">
-        <!-- EN / VI Bilingual Toggle Button -->
-        <div class="lang-switch-pill" role="group" aria-label="Language Switcher">
+      <!-- Quick Gallery Filter Shortcuts -->
+      <div class="drawer-filters">
+        <span class="drawer-group-title" data-i18n="menu_filters_label">QUICK GALLERY FILTER</span>
+        <div class="drawer-filter-pills">
+          <button type="button" class="drawer-filter-btn" data-quick-filter="all">All (20)</button>
+          <button type="button" class="drawer-filter-btn" data-quick-filter="stage-visuals">Stage LED (6)</button>
+          <button type="button" class="drawer-filter-btn" data-quick-filter="commercial-motion">Commercial (4)</button>
+          <button type="button" class="drawer-filter-btn" data-quick-filter="brand-identity">Brand &amp; KV (6)</button>
+          <button type="button" class="drawer-filter-btn" data-quick-filter="3d-editorial-community">3D &amp; Editorial (4)</button>
+        </div>
+      </div>
+
+      <!-- Controls: EN/VI Switcher, BGM Toggle, CV Download -->
+      <div class="drawer-controls">
+        <div class="drawer-control-row">
+          <span class="ctrl-label">LANGUAGE</span>
+          <div class="lang-switch-pill" role="group" aria-label="Language Switcher">
+            <button type="button" class="lang-btn active" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="vi">VI</button>
+          </div>
+        </div>
+
+        <div class="drawer-control-row">
+          <span class="ctrl-label">PERSONA BGM</span>
+          <button type="button" id="p3-bgm-toggle" class="p3-bgm-btn playing" aria-label="Toggle Background Music">
+            <div class="bgm-eq-bars" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <strong id="bgm-track-status">♪ ON</strong>
+          </button>
+          <audio id="p3-bgm-audio" src="assets/audio/persona3-bgm.wav" autoplay loop preload="auto"></audio>
+        </div>
+
+        <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="drawer-cv-btn">
+          <span data-i18n="btn_download_cv">DOWNLOAD 2026 CV (PDF) ↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Backdrop when drawer is open on mobile/desktop -->
+    <div class="left-menu-backdrop" id="left-menu-backdrop" aria-hidden="true"></div>
+  </aside>
+
+  <!-- =====================================================================
+       SECTION 1: BASIC INFO, INTRO & FEATURED SHOWREEL
+       (Exact Persona 3 Reload LEADER Status Screen Style from Uploaded Image)
+       ===================================================================== -->
+  <section id="sec-hero" class="p3r-hero-section" aria-label="Section 1: Basic Info, Intro and Featured Showreel">
+    <div class="p3r-stage">
+
+      <!-- Deep Cobalt & Cyan Persona 3 Reload Geometric Wave Background -->
+      <div class="p3r-bg-waves" aria-hidden="true">
+        <div class="p3r-wave-circle c1"></div>
+        <div class="p3r-wave-circle c2"></div>
+        <div class="p3r-diagonal-blue-shard"></div>
+        <div class="p3r-halftone-grid"></div>
+      </div>
+
+      <!-- TOP-LEFT "<LB ○ • • • • • • • RB>" NAVIGATION INDICATOR -->
+      <div class="p3r-top-lb-rb">
+        <button type="button" class="p3r-lb-btn" id="p3r-prev-tab" aria-label="Switch Hero View">
+          <span class="red-chevron">&lt;</span><strong>LB</strong>
+        </button>
+        <div class="p3r-dots-track" role="tablist" aria-label="Hero Info Dots">
+          <button type="button" class="p3r-dot active" data-hero-slide="0" aria-label="Profile & Showreel"></button>
+          <button type="button" class="p3r-dot" data-hero-slide="1" aria-label="Concert Stage Visuals"></button>
+          <button type="button" class="p3r-dot" data-hero-slide="2" aria-label="Commercial Motion & Brand"></button>
+        </div>
+        <button type="button" class="p3r-rb-btn" id="p3r-next-tab" aria-label="Next Hero View">
+          <strong>RB</strong><span class="red-chevron">&gt;</span>
+        </button>
+
+        <!-- Quick Top EN/VI & Section Jump Pills -->
+        <div class="p3r-top-quick-pills">
           <button type="button" class="lang-btn active" data-lang="en">EN</button>
           <button type="button" class="lang-btn" data-lang="vi">VI</button>
         </div>
-        <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="hud-cv-chip">CV PDF ↗</a>
       </div>
-    </div>
-  </header>
 
-  <!-- =====================================================================
-       SECTION 1: ZENLESS ZONE ZERO "CUNNING HARES" RETRO BROWSER & GOLD MEMBER
-       (Reference Image 1: EWW.CUNNINGHARES.INK + Hero Showreel Trigger)
-       ===================================================================== -->
-  <section id="zzz-hub" class="zzz-browser-section" aria-label="Zenless Zone Zero Cunning Hares Gold Member Hero">
-    <div class="zzz-device-frame">
+      <!-- TOP-RIGHT SKEWED PILLS: [LT] THEURGIA (SHOWREEL) / PERSONA [RT] (GALLERY) -->
+      <div class="p3r-top-right-ability-tags">
+        <a href="#hero-showreel-dock" class="p3r-ability-pill pill-theurgia">
+          <span class="pill-key">LT</span>
+          <div class="pill-text">
+            <strong>THEURGIA</strong>
+            <small>テウルギア · SHOWREEL 2026</small>
+          </div>
+        </a>
+        <a href="#sec-gallery" class="p3r-ability-pill pill-persona">
+          <div class="pill-text">
+            <strong>PERSONA</strong>
+            <small>ペルソナ · 20 PROJECTS</small>
+          </div>
+          <span class="pill-key">RT</span>
+        </a>
+      </div>
 
-      <!-- TOP DARK BROWSER URL BAR (EWW.CUNNINGHARES.INK -> EWW.ALDURHOANG.INK) -->
-      <div class="zzz-url-chrome">
-        <button type="button" class="zzz-chrome-menu-btn" id="zzz-toggle-halftone" title="Toggle Manga Monochrome / Full Color Mode" aria-label="Toggle Manga Halftone Mode">
-          <span class="chrome-dots"></span>
-          <span class="chrome-bars"></span>
+      <!-- GIANT DIAGONAL WHITE & BLACK PERSONA 3 RELOAD STATUS RIBBON -->
+      <div class="p3r-diagonal-ribbon-wrap">
+        <div class="p3r-diagonal-ribbon">
+
+          <!-- Giant ":3" / ":26" Cutout Number on Far Left -->
+          <div class="p3r-giant-number" aria-hidden="true">3</div>
+
+          <!-- Inner Black Skewed Top Bar: Name, /PLV 26, HP 20/20 (Cyan), SP 9830/2868 (Yellow-Green), NEXT EXP -->
+          <div class="p3r-black-stat-strip">
+            <div class="p3r-char-name-block">
+              <span class="p3r-jp-tag">グエン・ヴー・ミン・ホアン</span>
+              <h1 class="p3r-main-name">ALDUR HOANG <small>Nguyễn Vũ Minh Hoàng</small></h1>
+            </div>
+
+            <div class="p3r-plv-block">
+              <span class="plv-slash">/</span>
+              <span class="plv-label">PLV</span>
+              <strong class="plv-val">26</strong>
+              <div class="next-exp-row">
+                <span>EXP YEARS</span>
+                <strong>5,809 <small>(5+ YRS)</small></strong>
+              </div>
+            </div>
+
+            <div class="p3r-hp-sp-bars">
+              <div class="p3r-gauge">
+                <div class="gauge-nums"><strong>20</strong><small>/20</small></div>
+                <div class="gauge-bar bar-hp"><span></span></div>
+                <span class="gauge-lbl">HP · PROJECTS</span>
+              </div>
+              <div class="p3r-gauge">
+                <div class="gauge-nums"><strong>9830</strong><small>/2868</small></div>
+                <div class="gauge-bar bar-sp"><span></span></div>
+                <span class="gauge-lbl">SP · LED SPEC</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main White Diagonal Info Area: Cyan Diamond + Role + Orange Attack Shard + Stats + Intro Bio -->
+          <div class="p3r-white-info-band">
+            <div class="p3r-arcana-role-row">
+              <span class="p3r-cyan-gem" aria-hidden="true"></span>
+              <span class="p3r-arcana-kanji">節制</span>
+              <span class="p3r-lv-text">Lv<strong>30</strong></span>
+              <strong class="p3r-role-headline" id="hero-role-text">
+                MULTIDISCIPLINARY MOTION DESIGNER
+              </strong>
+            </div>
+
+            <div class="p3r-attack-stats-row">
+              <div class="p3r-orange-shard">
+                <span class="shard-lbl">SPECIALTY</span>
+                <strong class="shard-kanji">映像・舞台・3D</strong>
+              </div>
+              <div class="p3r-atk-def-nums">
+                <span class="stat-pair">STAGE LED • <strong>9830×2868</strong></span>
+                <span class="stat-pair">MOTION &amp; 3D • <strong>138</strong></span>
+                <span class="stat-pair">BRAND KV • <strong>122</strong></span>
+              </div>
+            </div>
+
+            <p class="p3r-intro-bio" id="hero-bio-text">
+              5+ years crafting arena-scale Concert Stage LED Visuals (Dân Chơi Dân Ca, ATVNCG, DIFF 2026), 2D/3D Commercial Motion (Shuttlerock, Goofi Team), and Brand Identity Systems (Bloomberg Businessweek VN, FLOW Ecosystem) in Ho Chi Minh City.
+            </p>
+
+            <div class="p3r-hero-cta-row">
+              <a href="#sec-gallery" class="p3r-cta-btn btn-primary-blue">
+                <span data-i18n="hero_btn_gallery">EXPLORE ALL 20 PROJECTS ↓</span>
+              </a>
+              <a href="#sec-cv-contact" class="p3r-cta-btn btn-dark-outline">
+                <span data-i18n="hero_btn_cv">CV &amp; CONTACT →</span>
+              </a>
+              <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="p3r-cta-btn btn-red-tag">
+                <span>CV PDF ↗</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE: MONOCHROME PORTRAIT WITH GLOWING CYAN EYES + CYAN ECHO + RED-CHECKERED "LEADER" BADGE -->
+      <div class="p3r-character-column">
+        <div class="p3r-portrait-frame">
+          <!-- Cyan Shadow Silhouette Echo Behind Portrait -->
+          <img src="assets/images/portrait-hoang.jpg" alt="" class="p3r-portrait-echo" aria-hidden="true" id="p3r-echo-img" />
+          <!-- High-Contrast Monochrome Portrait -->
+          <img src="assets/images/portrait-hoang.jpg" alt="Aldur Hoang (Nguyễn Vũ Minh Hoàng) — Leader Portrait" class="p3r-portrait-main" id="p3r-main-img" />
+          <!-- Electric Cyan Eye/ Rim Glow Accent -->
+          <div class="p3r-cyan-iris-glow" aria-hidden="true"></div>
+        </div>
+
+        <!-- Iconic Red-Checkered Black "LEADER" Badge (Click to cycle portrait) -->
+        <button type="button" class="p3r-leader-badge" id="p3r-cycle-portrait-btn" title="Click to switch character / portrait view">
+          <span class="leader-checkers" aria-hidden="true">
+            <i class="c-red"></i><i></i>
+            <i></i><i class="c-red"></i>
+          </span>
+          <span class="leader-word">LEADER</span>
         </button>
-        <div class="zzz-address-pill">
-          <svg class="zzz-lock-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"/>
-          </svg>
-          <span class="zzz-url-text">EWW.ALDURHOANG.INK</span>
-          <button type="button" class="zzz-refresh-btn" id="zzz-cycle-leader-btn" title="Switch Team Leader Visual" aria-label="Switch Team Leader Visual">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
-            </svg>
-          </button>
+      </div>
+
+      <!-- FEATURED SHOWREEL DOCK EMBEDDED IN SECTION 1 -->
+      <div id="hero-showreel-dock" class="p3r-showreel-dock">
+        <div class="p3r-reel-container">
+          <div class="p3r-reel-header">
+            <div class="p3r-reel-title-group">
+              <span class="p3r-theurgia-tag">THEURGIA // FEATURED SHOWREEL</span>
+              <h2 data-i18n="reel_heading">2026 Motion &amp; Concert Stage Visuals Showreel</h2>
+            </div>
+
+            <div class="p3r-reel-switches">
+              <button type="button" class="reel-mode-btn active" id="reel-btn-local">LOCAL MP4 REEL</button>
+              <button type="button" class="reel-mode-btn" id="reel-btn-yt">YOUTUBE EMBED</button>
+              <a href="https://youtu.be/lToSXfzFkKI" target="_blank" rel="noopener" class="reel-ext-chip">YouTube ↗</a>
+              <a href="https://vimeo.com/aldurhoang" target="_blank" rel="noopener" class="reel-ext-chip">Vimeo ↗</a>
+            </div>
+          </div>
+
+          <div class="p3r-reel-player-box">
+            <div id="reel-local-wrap">
+              <video
+                id="hero-showreel-video"
+                class="showreel-video"
+                controls
+                playsinline
+                preload="metadata"
+                poster="assets/images/cover-2026.jpg"
+              >
+                <source src="assets/videos/showreel-2026.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+
+            <div id="reel-yt-wrap" class="reel-yt-wrap" hidden>
+              <iframe
+                id="reel-yt-iframe"
+                class="showreel-yt-iframe"
+                src=""
+                data-src="https://www.youtube.com/embed/lToSXfzFkKI?rel=0"
+                title="Aldur Hoang Motion &amp; Stage Visuals Showreel"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="p3r-reel-footer">
+            <span>After Effects · Blender 3D · Concert MapLED 9830×2868 · SkyLED 3464×288 · Brand Systems</span>
+            <span>HO CHI MINH CITY, VIETNAM · aldurhoang@gmail.com</span>
+          </div>
         </div>
       </div>
 
-      <!-- CREAM ROUNDED SHEET CONTAINER -->
-      <div class="zzz-cream-sheet" id="zzz-cream-sheet">
-
-        <!-- 3-TAB TOP BAR: HOMEPAGE | GOLD MEMBER | INTER-KNOT RATING -->
-        <nav class="zzz-top-tabs" aria-label="Inter-Knot Browser Tabs">
-          <a href="#p5-command" class="zzz-tab-item" data-i18n="zzz_tab_home">HOMEPAGE</a>
-          <a href="#zzz-hub" class="zzz-tab-item active" data-i18n="zzz_tab_gold">GOLD MEMBER</a>
-          <a href="#zzz-ratecard" class="zzz-tab-item" data-i18n="zzz_tab_rating">INTER-KNOT RATING</a>
-        </nav>
-
-        <!-- HOT-PINK "PROFESSIONAL TEAM / GOLD MEMBER" HERO MARQUEE BANNER -->
-        <div class="zzz-hero-banner-wrap">
-          <div class="zzz-pro-team-pill">
-            <span class="zzz-bunny-badge" aria-hidden="true">
-              <svg viewBox="0 0 36 36" width="22" height="22" fill="currentColor">
-                <path d="M11 4c-1.8 0-3 1.6-2.7 3.7l1.3 8.1C7.8 17.5 7 19.6 7 22c0 5.5 4.9 9.5 11 9.5s11-4 11-9.5c0-2.4-.8-4.5-2.6-6.2l1.3-8.1C28 5.6 26.8 4 25 4c-1.5 0-2.7 1.2-3.1 2.9L20.5 13h-5l-1.4-6.1C13.7 5.2 12.5 4 11 4zm3.5 16.5a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6zm7 0a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6z"/>
-              </svg>
-            </span>
-            <span class="zzz-pro-team-text" data-i18n="zzz_pro_team">PROFESSIONAL TEAM</span>
-          </div>
-
-          <div class="zzz-pink-banner">
-            <div class="zzz-pink-banner-meta">
-              <div class="zzz-meta-left">
-                <strong>GOLD MEMBER</strong>
-                <small id="hero-meta-bar">5+ YEARS EXP • HO CHI MINH CITY, VN • AFTER EFFECTS / BLENDER / FIGMA</small>
-              </div>
-              <div class="zzz-meta-glyph-pill" aria-hidden="true">
-                <span>⍜</span>
-                <span>STAGE LED 9830×2868 · 2D/3D MOTION · BRAND</span>
-              </div>
-              <div class="zzz-meta-icons" aria-hidden="true">
-                <span>⬇</span>
-                <span>🌐</span>
-              </div>
-            </div>
-
-            <div class="zzz-giant-gold-title-row">
-              <span class="zzz-side-wedge wedge-left" aria-hidden="true"></span>
-              <h1 class="zzz-giant-gold-title">GOLD MEMBER</h1>
-              <span class="zzz-side-wedge wedge-right" aria-hidden="true"></span>
-            </div>
-          </div>
-        </div>
-
-        <!-- MAIN 2-COLUMN RETRO OS WINDOW BENTO GRID -->
-        <div class="zzz-bento-grid">
-
-          <!-- LEFT COLUMN: 3 STACKED RETRO OS WINDOWS (Billy Kid / Nekomiya / Anby layout) -->
-          <div class="zzz-left-stack">
-
-            <!-- CARD 1: CONCERT & STAGE VISUALS (Billy Kid window style) -->
-            <article class="zzz-small-win" data-jump-filter="stage-visuals" tabindex="0" role="button" aria-label="Filter by Concert and Stage Visuals">
-              <div class="zzz-win-topbar">
-                <span class="zzz-win-menu-ico" aria-hidden="true">≡</span>
-                <div class="zzz-pink-name-tab">
-                  <span class="zzz-alien-sub" aria-hidden="true">9830×2868 MAPLED &amp; 3D</span>
-                  <strong class="zzz-char-name" data-i18n="zzz_card1_title">Stage &amp; Concert</strong>
-                  <span class="zzz-char-emblem" aria-hidden="true">🎬</span>
-                </div>
-              </div>
-              <div class="zzz-small-art-box">
-                <img src="assets/images/vuthaomy-heroes-1.jpg" alt="Concert Stage LED Visuals — Dân Chơi Dân Ca, ATVNCG, DIFF 2026" class="zzz-art-img" />
-                <div class="zzz-halftone-overlay" aria-hidden="true"></div>
-                <div class="zzz-starburst-wrap">
-                  <div class="zzz-pink-burst" aria-hidden="true"></div>
-                  <div class="zzz-badge-emblem" aria-hidden="true">✦</div>
-                  <p class="zzz-quote-strip" data-i18n="zzz_card1_quote">Dân Chơi Dân Ca 9830×2868 LED, ATVNCG 3D &amp; DIFF 2026.</p>
-                </div>
-              </div>
-            </article>
-
-            <!-- CARD 2: COMMERCIAL MOTION & SKYLED (Nekomiya Mana window style) -->
-            <article class="zzz-small-win" data-jump-filter="commercial-motion" tabindex="0" role="button" aria-label="Filter by Commercial Motion and LED">
-              <div class="zzz-win-topbar">
-                <span class="zzz-win-menu-ico" aria-hidden="true">≡</span>
-                <div class="zzz-pink-name-tab">
-                  <span class="zzz-alien-sub" aria-hidden="true">SKYLED 3464×288 &amp; 9600×2000</span>
-                  <strong class="zzz-char-name" data-i18n="zzz_card2_title">Commercial Motion</strong>
-                  <span class="zzz-char-emblem" aria-hidden="true">🐰</span>
-                </div>
-              </div>
-              <div class="zzz-small-art-box">
-                <img src="assets/images/peach-bae-1.jpg" alt="Commercial Motion &amp; SkyLED — NHSNH Film, UDC Eclipse, Selsun" class="zzz-art-img" />
-                <div class="zzz-halftone-overlay" aria-hidden="true"></div>
-                <div class="zzz-starburst-wrap">
-                  <div class="zzz-pink-burst" aria-hidden="true"></div>
-                  <p class="zzz-quote-strip zzz-quote-tilted" data-i18n="zzz_card2_quote">Whether it's 9:16 social ads or 9600×2000 OOH LEDs, I'm proficient with both!</p>
-                </div>
-                <div class="zzz-pop-sticker sticker-fish" aria-hidden="true" title="Cinema &amp; SkyLED Motion">🐟</div>
-              </div>
-            </article>
-
-            <!-- CARD 3: BRAND SYSTEMS, 3D MASCOTS & EDITORIAL (Anby Demara window style) -->
-            <article class="zzz-small-win" data-jump-filter="brand-identity" tabindex="0" role="button" aria-label="Filter by Brand Identity and Key Visuals">
-              <div class="zzz-win-topbar">
-                <span class="zzz-win-menu-ico" aria-hidden="true">≡</span>
-                <div class="zzz-pink-name-tab">
-                  <span class="zzz-alien-sub" aria-hidden="true">FLOW · BLOOMBERG · PCA</span>
-                  <strong class="zzz-char-name" data-i18n="zzz_card3_title">Brand &amp; 3D Mascots</strong>
-                  <span class="zzz-char-emblem" aria-hidden="true">⚡</span>
-                </div>
-              </div>
-              <div class="zzz-small-art-box">
-                <img src="assets/images/bbwv-tya-1.jpg" alt="FLOW Ecosystem, Bloomberg Businessweek Vietnam &amp; 3D Mascots" class="zzz-art-img" />
-                <div class="zzz-halftone-overlay" aria-hidden="true"></div>
-                <div class="zzz-starburst-wrap">
-                  <div class="zzz-pink-burst" aria-hidden="true"></div>
-                  <p class="zzz-quote-strip" data-i18n="zzz_card3_quote">Ready for combat · 20 Case Studies (2022–2026).</p>
-                </div>
-                <div class="zzz-pop-sticker sticker-burger" aria-hidden="true" title="Brand Architecture &amp; 3D Mascots">🍔</div>
-              </div>
-            </article>
-
-          </div>
-
-          <!-- RIGHT COLUMN: LARGE "TEAM LEADER" FEATURE WINDOW + BOTTOM "GOLD MEMBER" BOX -->
-          <div class="zzz-right-stack">
-
-            <!-- TEAM LEADER FEATURE CARD (Nicole Demara layout -> Aldur Hoang) -->
-            <article class="zzz-leader-win">
-              <div class="zzz-leader-badge-win">
-                <div class="zzz-leader-badge-bar">
-                  <span class="win-sq" aria-hidden="true"></span>
-                  <div class="win-ctrl-group" aria-hidden="true">
-                    <span class="win-sq"></span>
-                    <span class="win-sq"></span>
-                  </div>
-                </div>
-                <div class="zzz-leader-badge-body">
-                  <span data-i18n="zzz_team_leader">TEAM LEADER</span>
-                </div>
-              </div>
-
-              <div class="zzz-leader-pink-frame">
-                <div class="zzz-leader-art-stage" id="zzz-leader-art-stage">
-                  <img
-                    src="assets/images/portrait-hoang.jpg"
-                    alt="Aldur Hoang (Nguyễn Vũ Minh Hoàng) — Team Leader"
-                    class="zzz-leader-portrait"
-                    id="zzz-leader-img"
-                  />
-                  <div class="zzz-halftone-overlay" aria-hidden="true"></div>
-
-                  <!-- Floating ZZZ Star Coins -->
-                  <span class="zzz-star-coin coin-top-right" aria-hidden="true">✪</span>
-                  <span class="zzz-star-coin coin-mid-left" aria-hidden="true">✪</span>
-                  <span class="zzz-star-coin coin-low-right" aria-hidden="true">✪</span>
-
-                  <!-- Quick Mode Pill inside Portrait -->
-                  <button type="button" class="zzz-portrait-mode-pill" id="zzz-portrait-switch-btn">
-                    ↻ SWITCH AVATAR / PORTRAIT
-                  </button>
-                </div>
-
-                <!-- Dark Bio Box at Bottom with Oversized Pixel Cursor Arrow -->
-                <div class="zzz-leader-bio-box">
-                  <span class="zzz-bio-chevron" aria-hidden="true">⌄</span>
-
-                  <div class="zzz-pixel-cursor" aria-hidden="true">
-                    <svg width="54" height="62" viewBox="0 0 28 32" fill="none">
-                      <path d="M2 2 L2 25 L8 19 L13 29 L18 27 L13 17 L22 17 Z" fill="#dcd6f7" stroke="#7c4ca5" stroke-width="2.4" stroke-linejoin="miter"/>
-                    </svg>
-                  </div>
-
-                  <div class="zzz-leader-title-row">
-                    <span class="zzz-pink-rabbit" aria-hidden="true">🐰</span>
-                    <h2 class="zzz-leader-name">Aldur Hoang <small>(Nguyễn Vũ Minh Hoàng)</small></h2>
-                  </div>
-
-                  <p class="zzz-leader-role-line" id="hero-role-text">
-                    Multidisciplinary Motion Designer — 2D/3D Motion, Concert Stage Visuals &amp; Brand Systems
-                  </p>
-
-                  <p class="zzz-leader-desc" id="hero-bio-text">
-                    The creative lead of Aldur Studio (5+ yrs exp). He has
-                    <span class="zzz-hl-pink">exceptional 9830×2868 concert LED mapping &amp; 2D/3D motion skills</span>,
-                    is adept at organizing and
-                    <span class="zzz-hl-pink">directing brand ecosystems, summit Key Visuals &amp; 3D mascots</span>
-                    across Shuttlerock, Goofi Team &amp; Bloomberg Businessweek VN, and is committed to tailoring the most impactful visual experiences for you!
-                  </p>
-
-                  <div class="zzz-leader-quick-stats">
-                    <span class="zzz-mini-stat"><strong>20</strong> CASE STUDIES</span>
-                    <span class="zzz-mini-stat"><strong>9830×2868</strong> STAGE LED</span>
-                    <span class="zzz-mini-stat"><strong>5+ YRS</strong> EXPERIENCE</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- BOTTOM-RIGHT PURPLE RETRO OS WINDOW ("GOLD MEMBER" + SHOWREEL LAUNCHER) -->
-            <div class="zzz-purple-gold-win">
-              <div class="zzz-win-topbar">
-                <span class="win-sq" aria-hidden="true"></span>
-                <div class="win-ctrl-group" aria-hidden="true">
-                  <span class="win-sq"></span>
-                  <span class="win-sq"></span>
-                </div>
-              </div>
-              <div class="zzz-purple-gold-body">
-                <div class="zzz-purple-big-words">
-                  <span>GOLD</span>
-                  <span>MEMBER</span>
-                </div>
-                <div class="zzz-purple-side-copy">
-                  <div class="zzz-alien-box" aria-hidden="true">SHOWREEL &amp; WORKS · 2026</div>
-                  <p id="hero-tagline-text">
-                    Bridging 2D/3D motion, concert stage visuals, brand systems, and AI workflows to craft unforgettable visual experiences.
-                  </p>
-                  <div class="zzz-purple-cta-row">
-                    <button type="button" class="zzz-mini-btn btn-pink-solid" id="open-showreel-modal-btn" data-i18n="btn_watch_reel">
-                      ▶ WATCH SHOWREEL
-                    </button>
-                    <a href="#p5-command" class="zzz-mini-btn btn-purple-outline" data-i18n="btn_explore_works">
-                      20 CASE STUDIES ↓
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- INTER-KNOT COMMISSION RATECARD STRIP -->
-        <div id="zzz-ratecard" class="zzz-ratecard-strip">
-          <div class="zzz-ratecard-header">
-            <div class="zzz-ratecard-title-group">
-              <span class="zzz-rate-tag" data-i18n="ratecard_eyebrow">INTER-KNOT COMMISSION BOARD · OFFICIAL RATECARD</span>
-              <h3 data-i18n="ratecard_heading">2026 Freelance Key Visual, 3D &amp; Motion Packages</h3>
-            </div>
-            <a href="#contact" class="zzz-commission-cta" data-i18n="ratecard_cta">POST A COMMISSION ↗</a>
-          </div>
-
-          <div class="zzz-ratecard-grid" id="ratecard-grid">
-            <!-- Populated dynamically from data/projects.json -->
-          </div>
-        </div>
-
-      </div>
-
-      <!-- BOTTOM DARK BROWSER STATUS FOOTER -->
-      <div class="zzz-bottom-chrome">
-        <div class="zzz-sss-logo" aria-hidden="true">S.S.S</div>
-        <div class="zzz-footer-search-pill">
-          <span>EWW.ALDURHOANG.INK</span>
-          <span aria-hidden="true">🔍</span>
-        </div>
-        <div class="zzz-footer-serial" aria-hidden="true">
-          ALDUR HOANG · PORTFOLIO VER 2026 · GITHUB PAGES
+      <!-- BOTTOM-RIGHT PERSONA 3 RELOAD STATUS GUIDE PROMPT -->
+      <div class="p3r-bottom-guide" aria-hidden="true">
+        <div class="guide-question">誰のステータスを確認する？</div>
+        <div class="guide-buttons">
+          <span><strong>✚</strong> 人間パラメータ</span>
+          <span><strong>ⓧ</strong> パーティ変更</span>
+          <span><strong>ⓑ</strong> 戻る</span>
         </div>
       </div>
 
@@ -325,281 +338,63 @@
   </section>
 
   <!-- =====================================================================
-       SECTION 2: PERSONA 5 EQUIPMENT / COMMAND MENU & SELECTED WORKS BENTO
-       (Reference Image 2: COMMAND / WEAPON / GUN / PROTECTOR / ACCESSORY / CLOTHES)
+       SECTION 2: GALLERY OF EVERY PROJECT DONE (ALL 20 PROJECTS + 6 CLIPS)
        ===================================================================== -->
-  <section id="p5-command" class="p5-command-section" aria-label="Persona 5 Command Loadout and Selected Works">
-
-    <!-- FULL PERSONA 5 "COMMAND" STAGE -->
-    <div class="p5-command-stage">
-      <div class="p5-cmd-bg-crimson" aria-hidden="true"></div>
-      <div class="p5-cmd-halftone" aria-hidden="true"></div>
-
-      <!-- LEFT SIDE: CONCENTRIC STARBURST + "& GUN & PROTECTOR" RIBBON + STENCIL SILHOUETTE -->
-      <div class="p5-cmd-left-art" aria-hidden="true">
-        <div class="p5-star-burst-backdrop">
-          <svg viewBox="0 0 500 500" class="p5-concentric-stars">
-            <polygon points="250,15 308,165 470,165 338,260 388,420 250,325 112,420 162,260 30,165 192,165" fill="#ffffff" stroke="#080808" stroke-width="16"/>
-            <polygon points="250,65 296,182 420,182 320,254 358,375 250,300 142,375 180,254 80,182 204,182" fill="#080808" stroke="#ffffff" stroke-width="10"/>
-            <polygon points="250,110 282,195 372,195 300,248 326,332 250,280 174,332 200,248 128,195 218,195" fill="#9ea3aa"/>
-          </svg>
-          <div class="p5-ribbon-banner">&amp; STAGE LED &amp; MOTION &amp; BRAND</div>
-        </div>
-
-        <div class="p5-joker-stencil-wrap">
-          <img src="assets/images/portrait-hoang.jpg" alt="" class="p5-joker-stencil-img" />
-          <div class="p5-stencil-halftone-dots"></div>
-        </div>
-      </div>
-
-      <!-- CENTER-LEFT: DIAGONAL PARTY / CATEGORY ROSTER WITH WHITE JAGGED SHARD HIGHLIGHT -->
-      <div class="p5-roster-column" role="tablist" aria-label="Project Category Roster">
-        <button type="button" class="p5-roster-btn active" data-filter="all" data-jp-name="全作品 · ALL 20 WORKS (2022–2026)" role="tab">
-          <span class="p5-roster-shard" aria-hidden="true"></span>
-          <span class="p5-roster-text">全作品 · ALL WORKS (20)</span>
-        </button>
-        <button type="button" class="p5-roster-btn" data-filter="stage-visuals" data-jp-name="舞台映像 · CONCERT &amp; STAGE VISUALS" role="tab">
-          <span class="p5-roster-shard" aria-hidden="true"></span>
-          <span class="p5-roster-text">モルガナ · STAGE VISUALS (6)</span>
-        </button>
-        <button type="button" class="p5-roster-btn" data-filter="commercial-motion" data-jp-name="広告映像 · COMMERCIAL MOTION &amp; LED" role="tab">
-          <span class="p5-roster-shard" aria-hidden="true"></span>
-          <span class="p5-roster-text">坂本 竜司 · COMMERCIAL LED (4)</span>
-        </button>
-        <button type="button" class="p5-roster-btn" data-filter="brand-identity" data-jp-name="ブランド · BRAND IDENTITY &amp; KV" role="tab">
-          <span class="p5-roster-shard" aria-hidden="true"></span>
-          <span class="p5-roster-text">高巻 杏 · BRAND &amp; KV (6)</span>
-        </button>
-        <button type="button" class="p5-roster-btn" data-filter="3d-editorial-community" data-jp-name="3D・編集 · 3D MASCOTS &amp; EDITORIAL" role="tab">
-          <span class="p5-roster-shard" aria-hidden="true"></span>
-          <span class="p5-roster-text">喜多川 祐介 · 3D &amp; EDITORIAL (4)</span>
-        </button>
-        <button type="button" class="p5-roster-btn" data-jump="#showreel" data-jp-name="2026年映像 · MOTION SHOWREEL" role="tab">
-          <span class="p5-roster-shard" aria-hidden="true"></span>
-          <span class="p5-roster-text">佐倉 双葉 · SHOWREEL &amp; LAB</span>
-        </button>
-        <button type="button" class="p5-roster-btn" data-jump="#p5-confidant" data-jp-name="コープ履歴 · CONFIDANT RANK 10" role="tab">
-          <span class="p5-roster-shard" aria-hidden="true"></span>
-          <span class="p5-roster-text">新島 真 · CONFIDANT RANK</span>
-        </button>
-      </div>
-
-      <!-- RIGHT SIDE: TILTED GREY POLYGON PLATE & 5 STACKED EQUIPMENT BANNERS -->
-      <div class="p5-equip-right-wrap">
-        <div class="p5-grey-polygon-plate" aria-hidden="true"></div>
-
-        <div class="p5-equip-stack" role="navigation" aria-label="Creative Equipment Loadout">
-          <!-- SLOT 1: WEAPON (Active Cyan/Red Split Highlight from Image 2) -->
-          <button type="button" class="p5-equip-slot active" data-equip-filter="all">
-            <div class="p5-slot-top">
-              <span class="p5-slot-jp">近接武器</span>
-              <span class="p5-slot-star">★</span>
-              <span class="p5-slot-en">WEAPON</span>
-            </div>
-            <div class="p5-slot-bottom">
-              <span id="p5-weapon-label">ヘヴィサーベル · ALL 20 CASE STUDIES</span>
-            </div>
-          </button>
-
-          <!-- SLOT 2: GUN -> CONCERT & STAGE VISUALS -->
-          <button type="button" class="p5-equip-slot" data-equip-filter="stage-visuals">
-            <div class="p5-slot-top">
-              <span class="p5-slot-jp">遠隔武器</span>
-              <span class="p5-slot-star">★</span>
-              <span class="p5-slot-en">GUN</span>
-            </div>
-            <div class="p5-slot-bottom">
-              <span>夜夢岩弩 · CONCERT &amp; STAGE VISUALS (6)</span>
-            </div>
-          </button>
-
-          <!-- SLOT 3: PROTECTOR -> COMMERCIAL MOTION & LED -->
-          <button type="button" class="p5-equip-slot" data-equip-filter="commercial-motion">
-            <div class="p5-slot-top">
-              <span class="p5-slot-jp">防具</span>
-              <span class="p5-slot-star">★</span>
-              <span class="p5-slot-en">PROTECTOR</span>
-            </div>
-            <div class="p5-slot-bottom">
-              <span>消沈の首輪 · COMMERCIAL MOTION &amp; LED (4)</span>
-            </div>
-          </button>
-
-          <!-- SLOT 4: ACCESSORY -> BRAND IDENTITY & KEY VISUALS -->
-          <button type="button" class="p5-equip-slot" data-equip-filter="brand-identity">
-            <div class="p5-slot-top">
-              <span class="p5-slot-jp">アクセサリー</span>
-              <span class="p5-slot-star">★</span>
-              <span class="p5-slot-en">ACCESSORY</span>
-            </div>
-            <div class="p5-slot-bottom">
-              <span>ブリッツリング · BRAND IDENTITY &amp; KV (6)</span>
-            </div>
-          </button>
-
-          <!-- SLOT 5: CLOTHES -> 3D MASCOTS, EDITORIAL & COMMUNITY -->
-          <button type="button" class="p5-equip-slot" data-equip-filter="3d-editorial-community">
-            <div class="p5-slot-top">
-              <span class="p5-slot-jp">衣装</span>
-              <span class="p5-slot-star">★</span>
-              <span class="p5-slot-en">CLOTHES</span>
-            </div>
-            <div class="p5-slot-bottom">
-              <span>モルガナセット · 3D MASCOTS &amp; EDITORIAL (4)</span>
-            </div>
-          </button>
-        </div>
-      </div>
-
-      <!-- BOTTOM-LEFT RANSOM-NOTE "COMMAND" TITLE & "どの装備を変更する？" -->
-      <div class="p5-command-ransom-group">
-        <div class="p5-ransom-command" aria-label="COMMAND">
-          <span class="r-char r-c">C</span>
-          <span class="r-char r-o">O</span>
-          <span class="r-char r-m1">M</span>
-          <span class="r-char r-m2">M</span>
-          <span class="r-char r-a">A</span>
-          <span class="r-char r-n">N</span>
-          <span class="r-char r-d">D</span>
-        </div>
-        <div class="p5-command-sub-jp" id="p5-command-prompt">
-          どの装備を変更する？ · SELECT LOADOUT TO FILTER PORTFOLIO
-        </div>
-      </div>
-
-      <!-- BOTTOM-RIGHT CONTROLLER LEGEND (ⓧ戻る Ⓞ決定) -->
-      <div class="p5-controller-prompt" aria-hidden="true">
-        <span class="p5-btn-badge">ⓧ 戻る</span>
-        <span class="p5-btn-badge">Ⓞ 決定</span>
-      </div>
-    </div>
-
-    <!-- =====================================================================
-         SELECTED WORKS BENTO DECK (DATA-DRIVEN FROM data/projects.json)
-         ===================================================================== -->
-    <div class="container p5-projects-deck" id="projects-deck">
-      <div class="p5-deck-header">
-        <div class="p5-deck-title-block">
-          <span class="p5-red-tag" data-i18n="works_eyebrow">SELECTED WORKS (2022 – 2026) · 4 CORE PILLARS</span>
-          <h2 class="p5-section-heading" data-i18n="works_heading">Featured Projects &amp; Case Studies</h2>
-        </div>
-
-        <!-- Filter & Search Controls -->
-        <div class="controls-bar">
-          <div class="filter-tabs" role="tablist" aria-label="Filter projects by category">
-            <button type="button" class="filter-btn active" data-filter="all">
-              <span data-i18n="cat_all">All Works</span>
-              <span class="count-badge" id="count-all">20</span>
-            </button>
-            <button type="button" class="filter-btn" data-filter="stage-visuals">
-              <span data-i18n="cat_stage">Concert &amp; Stage Visuals</span>
-              <span class="count-badge" id="count-stage-visuals">6</span>
-            </button>
-            <button type="button" class="filter-btn" data-filter="commercial-motion">
-              <span data-i18n="cat_commercial">Commercial Motion &amp; LED</span>
-              <span class="count-badge" id="count-commercial-motion">4</span>
-            </button>
-            <button type="button" class="filter-btn" data-filter="brand-identity">
-              <span data-i18n="cat_brand">Brand Identity &amp; Key Visuals</span>
-              <span class="count-badge" id="count-brand-identity">6</span>
-            </button>
-            <button type="button" class="filter-btn" data-filter="3d-editorial-community">
-              <span data-i18n="cat_3d">3D Mascots, Editorial &amp; Community</span>
-              <span class="count-badge" id="count-3d-editorial-community">4</span>
-            </button>
-          </div>
-
-          <div class="search-box">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <input type="search" id="project-search" placeholder="Search project, LED spec (9830×2868), studio, or tool..." aria-label="Search projects" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Dynamic Bento Project Grid rendered by script.js -->
-      <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <!-- =====================================================================
-       SECTION 3: 2026 SHOWREEL (YOUTUBE + LOCAL MP4) & 6-CLIP VIDEO LAB
-       ===================================================================== -->
-  <section id="showreel" class="showreel-lab-section" aria-label="2026 Motion Showreel and 3D Video Lab">
+  <section id="sec-gallery" class="gallery-section" aria-label="Section 2: Complete Project Gallery">
     <div class="container">
-      <div class="p5-deck-header">
-        <div class="p5-deck-title-block">
-          <span class="p5-red-tag" data-i18n="reel_eyebrow">SPECIAL COMMISSION REEL · 2026 SHOWREEL &amp; MOTION LAB</span>
-          <h2 class="p5-section-heading" data-i18n="reel_heading">Motion &amp; Stage Visuals Showreel</h2>
+
+      <!-- Section 2 Header & Filter Bar -->
+      <div class="sec-header-block">
+        <div>
+          <span class="p3r-eyebrow-tag" data-i18n="works_eyebrow">SECTION 02 // COMPLETE ARCHIVE (2022 – 2026)</span>
+          <h2 class="sec-main-title" data-i18n="works_heading">All Projects &amp; Stage Visuals Gallery</h2>
         </div>
-        <p class="p5-section-sub" data-i18n="reel_sub">
-          A curated compilation of 2D/3D motion graphics, commercial ad campaigns, concert LED visualizers, and 3D product animations.
+        <p class="sec-subtitle" data-i18n="works_sub">
+          Click any project card to open the full Case Study (technical specs, LED resolutions, role, studio credits, and visual breakdowns).
         </p>
       </div>
 
-      <!-- Retro ZZZ / P5 Framed Video Showreel Player with YouTube / Local Switch -->
-      <div class="showreel-frame">
-        <div class="showreel-win-bar">
-          <span class="win-bar-title">▶ ALDUR_HOANG_SHOWREEL_2026</span>
-          <div class="win-bar-links">
-            <button type="button" class="reel-mode-btn active" id="reel-btn-local">LOCAL MP4 REEL</button>
-            <button type="button" class="reel-mode-btn" id="reel-btn-yt">YOUTUBE EMBED</button>
-            <a href="https://youtu.be/lToSXfzFkKI" target="_blank" rel="noopener">YouTube ↗</a>
-            <a href="https://vimeo.com/aldurhoang" target="_blank" rel="noopener">Vimeo ↗</a>
-          </div>
+      <!-- Streamlined Filter & Search Controls -->
+      <div class="controls-bar">
+        <div class="filter-tabs" role="tablist" aria-label="Filter projects by category">
+          <button type="button" class="filter-btn active" data-filter="all">
+            <span data-i18n="cat_all">All Works</span>
+            <span class="count-badge" id="count-all">20</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="stage-visuals">
+            <span data-i18n="cat_stage">Concert &amp; Stage Visuals</span>
+            <span class="count-badge" id="count-stage-visuals">6</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="commercial-motion">
+            <span data-i18n="cat_commercial">Commercial Motion &amp; LED</span>
+            <span class="count-badge" id="count-commercial-motion">4</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="brand-identity">
+            <span data-i18n="cat_brand">Brand Identity &amp; Key Visuals</span>
+            <span class="count-badge" id="count-brand-identity">6</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="3d-editorial-community">
+            <span data-i18n="cat_3d">3D Mascots, Editorial &amp; Community</span>
+            <span class="count-badge" id="count-3d-editorial-community">4</span>
+          </button>
         </div>
 
-        <div id="reel-local-wrap">
-          <video
-            id="hero-showreel-video"
-            class="showreel-video"
-            controls
-            playsinline
-            preload="metadata"
-            poster="assets/images/cover-2026.jpg"
-          >
-            <source src="assets/videos/showreel-2026.mp4" type="video/mp4" />
-            Your browser does not support HTML5 video.
-          </video>
-        </div>
-
-        <div id="reel-yt-wrap" class="reel-yt-wrap" hidden>
-          <iframe
-            id="reel-yt-iframe"
-            class="showreel-yt-iframe"
-            src=""
-            data-src="https://www.youtube.com/embed/lToSXfzFkKI?rel=0"
-            title="Aldur Hoang Motion &amp; Stage Visuals Showreel"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-
-        <div class="showreel-caption-bar">
-          <div class="showreel-meta">
-            <span class="tag-pill tag-pink">SHOWREEL 2026</span>
-            <span>After Effects · Blender 3D · Concert MapLED 9830×2868 · Commercial Motion</span>
-          </div>
-          <div class="showreel-ext-group">
-            <a href="https://youtu.be/lToSXfzFkKI" target="_blank" rel="noopener" class="text-link">
-              Watch on YouTube ↗
-            </a>
-            <a href="https://vimeo.com/aldurhoang" target="_blank" rel="noopener" class="text-link">
-              Watch on Vimeo ↗
-            </a>
-          </div>
+        <div class="search-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="project-search" placeholder="Search project, LED spec (9830×2868), studio, or tool..." aria-label="Search projects" />
         </div>
       </div>
 
-      <!-- Motion & 3D Video Lab Sub-grid -->
-      <div id="motion-lab" class="motion-lab-subblock">
-        <div class="p5-deck-header" style="margin-top: 56px;">
-          <div class="p5-deck-title-block">
-            <span class="p5-red-tag">MOTION &amp; 3D ARCHIVE · 6 INTERACTIVE CLIPS</span>
-            <h3 class="p5-section-heading" data-i18n="lab_heading">Commercial Motion, 3D Clips &amp; Social Reels</h3>
+      <!-- Dynamic 20-Project Gallery Grid rendered by script.js -->
+      <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
+
+      <!-- 6 Interactive Motion & 3D Video Clips Sub-Gallery -->
+      <div id="motion-lab" class="motion-clips-subgallery">
+        <div class="subgallery-header">
+          <div>
+            <span class="p3r-eyebrow-tag">MOTION &amp; 3D VIDEO CLIPS · HOVER TO PLAY</span>
+            <h3 class="subgallery-title" data-i18n="lab_heading">Commercial Motion, 3D Clips &amp; Social Reels (6 Clips)</h3>
           </div>
-          <p class="p5-section-sub" data-i18n="lab_sub">
-            Hover or tap any video window to play. Featuring short-form performance ads at Shuttlerock, 3D Visual Community pieces, and product TVCs.
-          </p>
         </div>
 
         <div class="video-lab-grid">
@@ -682,162 +477,40 @@
           </article>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- =====================================================================
-       SECTION 4: PERSONA 5 CONFIDANT / CHARACTER STATUS & SKILLS SCREEN
-       (Reference Image 3: The name / ARCANA JOB / RANK 9 / NEXT ABILITY 10)
+       SECTION 3: CV INFORMATION (EXPERIENCE, SKILLS, RATECARD) & CONTACT FORM
        ===================================================================== -->
-  <section id="p5-confidant" class="p5-confidant-section" aria-label="Persona 5 Confidant Status and Career Experience">
+  <section id="sec-cv-contact" class="cv-contact-section" aria-label="Section 3: CV Information and Contact Form">
+    <div class="container">
 
-    <!-- CONFIDANT STAGE (Reference Image 3) -->
-    <div class="p5-confidant-stage">
-      <div class="p5-conf-slash slash-1" aria-hidden="true"></div>
-      <div class="p5-conf-slash slash-2" aria-hidden="true"></div>
-      <div class="p5-conf-corner-stars" aria-hidden="true">★ ✦ ★</div>
-
-      <!-- INTERACTIVE CAREER CHAPTER SELECTOR BAR AT TOP -->
-      <div class="p5-conf-selector-bar" role="tablist" aria-label="Select Career Confidant Chapter">
-        <span class="conf-selector-label">CONFIDANT ARCHIVE:</span>
-        <button type="button" class="conf-tab-btn active" data-conf="shuttlerock" role="tab">RANK 10 · SHUTTLEROCK</button>
-        <button type="button" class="conf-tab-btn" data-conf="goofi" role="tab">RANK 9 · GOOFI TEAM (2026)</button>
-        <button type="button" class="conf-tab-btn" data-conf="bloomberg" role="tab">RANK 9 · BLOOMBERG VN</button>
-        <button type="button" class="conf-tab-btn" data-conf="rotaract" role="tab">RANK 8 · ROTARACT OML</button>
-        <button type="button" class="conf-tab-btn" data-conf="dethird" role="tab">RANK 8 · DETHIRD STUDIO</button>
-        <button type="button" class="conf-tab-btn" data-conf="hoasen" role="tab">RANK 8 · HOA SEN B.A.</button>
-      </div>
-
-      <div class="p5-confidant-grid">
-
-        <!-- LEFT COLUMN: CUTOUT CHARACTER PORTRAIT + RANSOM-NOTE "The name" + CREW QUOTE -->
-        <div class="p5-conf-left">
-          <div class="p5-conf-avatar-sticker">
-            <img src="assets/images/portrait-hoang.jpg" alt="Aldur Hoang High-Contrast Cutout" id="p5-conf-img" />
-          </div>
-
-          <!-- Ransom-Note Letter Tiles ("The name" -> "Aldur Hoang") -->
-          <div class="p5-ransom-name-row" aria-label="Aldur Hoang">
-            <span class="rn-tile rn-inv">A</span>
-            <span class="rn-tile">l</span>
-            <span class="rn-tile rn-tilt-l">d</span>
-            <span class="rn-tile rn-inv">u</span>
-            <span class="rn-tile">r</span>
-            <span class="rn-gap"></span>
-            <span class="rn-tile rn-inv rn-tilt-r">H</span>
-            <span class="rn-tile">o</span>
-            <span class="rn-tile rn-inv">a</span>
-            <span class="rn-tile rn-tilt-l">n</span>
-            <span class="rn-tile">g</span>
-          </div>
-
-          <!-- Skewed Black Box: "Your character from the perspective of your crew. Short and sweet." -->
-          <div class="p5-crew-perspective-box">
-            <p id="p5-crew-quote">
-              “Your high-speed global motion specialist: transforms static brand assets into high-retention 9:16, 4:5 &amp; 16:9 video campaigns across 6 international markets.”
-            </p>
-          </div>
+      <div class="sec-header-block">
+        <div>
+          <span class="p3r-eyebrow-tag" data-i18n="exp_eyebrow">SECTION 03 // FULL CV DOSSIER &amp; COMMISSION CONTACT</span>
+          <h2 class="sec-main-title" data-i18n="exp_heading">Curriculum Vitae, Ratecard &amp; Contact</h2>
         </div>
-
-        <!-- RIGHT COLUMN: FULL NAME + TAROT CARD + ARCANA JOB + RANK 9 + SKILLS 1/2/3 + NEXT ABILITY RANK 10 -->
-        <div class="p5-conf-right" aria-live="polite">
-
-          <div class="p5-conf-header-stack">
-
-            <!-- Tilted Tarot Card ("LA JUSTICE") overlapping left edge -->
-            <div class="p5-tarot-card" aria-hidden="true">
-              <div class="p5-tarot-inner">
-                <span class="tarot-num" id="p5-tarot-num">VIII</span>
-                <div class="tarot-emblem">⚖️</div>
-                <span class="tarot-name" id="p5-tarot-name">LA JUSTICE</span>
-              </div>
-            </div>
-
-            <!-- Bar 1: Their Full Name -->
-            <div class="p5-fullname-bar">
-              <span id="p5-conf-fullname">Nguyễn Vũ Minh Hoàng · Shuttlerock (Jul 2024 – Present)</span>
-            </div>
-
-            <!-- Bar 2: ARCANA | JOB | RANK 9 + 10 STARS -->
-            <div class="p5-arcana-job-bar">
-              <div class="p5-arcana-row">
-                <span class="p5-arcana-label">ARCANA</span>
-                <strong class="p5-job-title" id="p5-conf-job">GLOBAL MOTION DESIGNER</strong>
-                <span class="p5-rank-label">RANK</span>
-                <strong class="p5-rank-num" id="p5-conf-rank">10</strong>
-              </div>
-              <div class="p5-stars-row" id="p5-conf-stars" aria-label="Rank stars">
-                ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
-              </div>
-            </div>
-
-            <!-- Bar 3: Black Episode Summary ("Last time, on Dragon Ball Z...") -->
-            <div class="p5-episode-recap-box">
-              <p id="p5-conf-recap">
-                Last time, at Shuttlerock: Crafted concept visuals, style frames, and high-converting motion ads across EN, DE, FR, ZH-TW, VN &amp; TH markets while pioneering generative AI workflows.
-              </p>
-            </div>
-          </div>
-
-          <!-- MIDDLE STACKED BLACK SKILL BARS (Skill 1, Skill 2, Skill 3) -->
-          <div class="p5-skills-stack">
-            <div class="p5-skill-bar skill-bar-1">
-              <span class="p5-skill-icon" aria-hidden="true">✹</span>
-              <span class="p5-skill-text" id="p5-skill-1">Multi-Market Short-Form Motion (Meta, TikTok, Hulu, YouTube)</span>
-            </div>
-            <div class="p5-skill-bar skill-bar-2">
-              <span class="p5-skill-icon" aria-hidden="true">🥾</span>
-              <span class="p5-skill-text" id="p5-skill-2">Concept Style Frames &amp; 2D/3D Product Motion Systems</span>
-            </div>
-            <div class="p5-skill-bar skill-bar-3">
-              <span class="p5-skill-icon" aria-hidden="true">🍁</span>
-              <span class="p5-skill-text" id="p5-skill-3">Generative AI Ideation &amp; Production Workflow Optimization</span>
-            </div>
-          </div>
-
-          <!-- BOTTOM "NEXT ABILITY / RANK 10" BAR -->
-          <div class="p5-next-ability-wrap">
-            <div class="p5-next-ability-header">
-              <span class="p5-next-title">NEXT ABILITY</span>
-              <span class="p5-next-rank-lbl">RANK</span>
-            </div>
-            <div class="p5-next-ability-bar">
-              <span class="p5-next-bolt" aria-hidden="true">⚡</span>
-              <strong class="p5-next-skill-name" id="p5-next-skill">Global Creative Direction &amp; Automated Motion Systems</strong>
-              <span class="p5-next-num">10</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-    <!-- COMPLETE CAREER TIMELINE, EDUCATION & TOOLKIT BENTO BELOW -->
-    <div class="container experience-bento-wrap">
-      <div class="p5-deck-header">
-        <div class="p5-deck-title-block">
-          <span class="p5-red-tag" data-i18n="exp_eyebrow">FULL CONFIDANT DOSSIER · 2018 – 2026</span>
-          <h2 class="p5-section-heading" data-i18n="exp_heading">Experience Timeline, Education &amp; Skills</h2>
-        </div>
-        <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="btn btn-pink">
+        <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="p3r-cta-btn btn-primary-blue">
           <span data-i18n="btn_download_cv">Download 2026 CV (PDF) ↗</span>
         </a>
       </div>
 
+      <!-- CV Experience Timeline + Education & Skills Grid -->
       <div class="experience-bento">
-        <!-- Dynamic Work Experience Timeline populated from data/projects.json -->
+        <!-- Left Column: Work Experience Timeline -->
         <div class="bento-card timeline-card">
           <h3 class="bento-heading">
             <span class="accent-dot"></span>
             <span data-i18n="exp_timeline_title">Professional Experience (2022 – 2026)</span>
           </h3>
           <div class="timeline-list" id="timeline-list">
-            <!-- Rendered by script.js -->
+            <!-- Populated dynamically from data/projects.json -->
           </div>
         </div>
 
-        <!-- Right Column: Education + 3 Skill Pillars -->
+        <!-- Right Column: Education + Skills + Freelance Ratecard -->
         <div class="bento-side-stack">
           <div class="bento-card">
             <h3 class="bento-heading">
@@ -845,9 +518,9 @@
               <span data-i18n="edu_title">Education</span>
             </h3>
             <div class="edu-block">
-              <h4 id="edu-degree">Bachelor of Graphic Design (Good)</h4>
-              <span class="timeline-company" id="edu-school">Hoa Sen University · Graduated May 2024</span>
-              <p id="edu-desc">Developed strong artistry fundamentals and creative mindset. Led experimental projects involving strategic planning, creative direction, charity branding (<em>Giao Organization</em>), and communication research.</p>
+              <h4>Bachelor of Graphic Design (Good)</h4>
+              <span class="timeline-company">Hoa Sen University · Graduated May 2024</span>
+              <p>Developed strong artistry fundamentals and creative mindset. Led experimental projects involving strategic planning, creative direction, charity branding (<em>Giao Organization</em>), and communication research.</p>
             </div>
           </div>
 
@@ -868,35 +541,42 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- =====================================================================
-       SECTION 5: CONTACT, STATIC FORM & SOCIAL LINKS
-       ===================================================================== -->
-  <section id="contact" class="contact-section" aria-label="Contact Aldur Hoang">
-    <div class="container">
+      <!-- Freelance Ratecard Strip -->
+      <div class="cv-ratecard-wrap">
+        <div class="subgallery-header">
+          <div>
+            <span class="p3r-eyebrow-tag" data-i18n="ratecard_eyebrow">OFFICIAL FREELANCE PACKAGES</span>
+            <h3 class="subgallery-title" data-i18n="ratecard_heading">2026 Key Visual, 3D &amp; Motion Ratecard</h3>
+          </div>
+        </div>
+        <div class="zzz-ratecard-grid" id="ratecard-grid">
+          <!-- Populated dynamically from data/projects.json -->
+        </div>
+      </div>
+
+      <!-- Contact Details & Calling Card Form -->
       <div class="contact-card">
         <div class="contact-copy">
-          <span class="p5-red-tag" data-i18n="contact_eyebrow">INTER-KNOT COMMISSION · SEND A CALLING CARD</span>
-          <h2 class="contact-title" data-i18n="contact_heading">Ready to bring bold motion &amp; stage visuals to your next project?</h2>
+          <span class="p3r-eyebrow-tag" data-i18n="contact_eyebrow">DIRECT CONTACT &amp; SOCIAL CHANNELS</span>
+          <h3 class="contact-title" data-i18n="contact_heading">Ready to bring bold motion &amp; stage visuals to your next project?</h3>
           <p class="contact-subtitle" data-i18n="contact_sub">
             Available for full-time opportunities, concert stage LED visuals, 2D/3D commercial motion, 3D mascot modeling, and brand identity systems.
           </p>
 
           <div class="contact-buttons">
-            <a href="mailto:aldurhoang@gmail.com" class="btn btn-pink">
+            <a href="mailto:aldurhoang@gmail.com" class="p3r-cta-btn btn-primary-blue">
               <span>aldurhoang@gmail.com</span>
             </a>
-            <a href="tel:+84901498984" class="btn btn-outline">
+            <a href="tel:+84901498984" class="p3r-cta-btn btn-dark-outline">
               <span>(+84) 901 498 984</span>
             </a>
-            <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="btn btn-cyan">
+            <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="p3r-cta-btn btn-red-tag">
               <span>CV 2026 (PDF) ↗</span>
             </a>
           </div>
 
-          <div class="contact-socials" style="margin-top: 24px;">
+          <div class="contact-socials">
             <a href="https://www.behance.net/balderhoang" target="_blank" rel="noopener" class="social-row">
               <span>Behance</span>
               <strong>behance.net/balderhoang ↗</strong>
@@ -920,14 +600,13 @@
           </div>
         </div>
 
-        <!-- Static Contact Form (Web3Forms / Mailto Fallback as specified in PRD.md) -->
+        <!-- Static Contact Form -->
         <div class="contact-form-box">
           <div class="form-win-header">
-            <span>✉ SEND CALLING CARD // COMMISSION BRIEF</span>
-            <span aria-hidden="true">★ P5</span>
+            <span>✉ SEND COMMISSION BRIEF // DIRECT INQUIRY</span>
+            <span aria-hidden="true">◆ P3R</span>
           </div>
           <form id="commission-form" class="commission-form" action="https://api.web3forms.com/submit" method="POST">
-            <!-- Replace YOUR_WEB3FORMS_ACCESS_KEY with actual key when ready; JS handles instant mailto fallback -->
             <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
             <div class="form-field">
               <label for="comm-name" data-i18n="form_name">YOUR NAME / STUDIO</label>
@@ -951,38 +630,25 @@
               <label for="comm-msg" data-i18n="form_msg">PROJECT BRIEF &amp; TIMELINE</label>
               <textarea id="comm-msg" name="message" rows="4" required placeholder="Tell me about your project specs, timeline, or deliverables..."></textarea>
             </div>
-            <button type="submit" class="btn btn-pink form-submit-btn">
-              <span data-i18n="form_submit">SEND CALLING CARD ↗</span>
+            <button type="submit" class="p3r-cta-btn btn-primary-blue form-submit-btn">
+              <span data-i18n="form_submit">SEND MESSAGE ↗</span>
             </button>
-            <p class="form-status-note" id="form-status-note">
+            <p class="form-status-note">
               Direct dispatch to <strong>aldurhoang@gmail.com</strong>
             </p>
           </form>
         </div>
       </div>
+
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 <strong>Aldur Hoang</strong> (Nguyễn Vũ Minh Hoàng). Styled in Persona 5 Command / Confidant UI &amp; Zenless Zone Zero "Cunning Hares" Inter-Knot OS.</p>
-      <a href="#zzz-hub" class="back-to-top">Back to Top ↑</a>
+      <p>© 2026 <strong>Aldur Hoang</strong> (Nguyễn Vũ Minh Hoàng) · Persona 3 Reload Status UI &amp; Interactive Portfolio.</p>
+      <a href="#sec-hero" class="back-to-top">Back to Top ↑</a>
     </div>
   </footer>
-
-  <!-- Auto-Play Background Music HUD -->
-  <div id="p3-bgm-hud" class="p3-bgm-hud" aria-label="Background Music Player">
-    <audio id="p3-bgm-audio" src="assets/audio/persona3-bgm.wav" autoplay loop preload="auto"></audio>
-    <button type="button" id="p3-bgm-toggle" class="p3-bgm-btn playing" aria-label="Toggle Background Music">
-      <div class="bgm-eq-bars" aria-hidden="true">
-        <span></span><span></span><span></span><span></span>
-      </div>
-      <div class="bgm-meta">
-        <span class="bgm-tag">PERSONA × INTER-KNOT BGM</span>
-        <strong class="bgm-track-name" id="bgm-track-status">♪ Color Your Night / Rebel Mix</strong>
-      </div>
-    </button>
-  </div>
 
   <!-- Case Study Lightbox Modal -->
   <div id="project-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">

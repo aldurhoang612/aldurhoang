@@ -1333,114 +1333,131 @@ const FALLBACK_PORTFOLIO_DATA = {
 };
 
 // =========================================================================
-// ALDUR HOANG PORTFOLIO — DATA-DRIVEN PERSONA 5 × ZZZ INTERACTIVE ENGINE
-// Loads dynamically from data/projects.json with embedded offline fallback
+// ALDUR HOANG PORTFOLIO — 3-SECTION PERSONA 3 RELOAD "LEADER" ENGINE
+// Section 1: P3R Leader Status, Basic Info, Intro & Featured Showreel
+// Section 2: Complete Project Gallery (All 20 Projects + 6 Video Clips)
+// Section 3: Full CV Dossier (Experience, Education, Skills, Ratecard) & Contact
+// + Left-Side Collapsible Menu Toggle
 // =========================================================================
 
 const UI_STRINGS = {
   en: {
-    nav_lobby: '01 · GOLD MEMBER',
-    nav_work: '02 · P5 COMMAND & WORK',
-    nav_reel: '03 · SHOWREEL',
-    nav_about: '04 · P5 CONFIDANT',
-    nav_contact: '05 · CONTACT',
-    zzz_tab_home: 'HOMEPAGE',
-    zzz_tab_gold: 'GOLD MEMBER',
-    zzz_tab_rating: 'INTER-KNOT RATING',
-    zzz_pro_team: 'PROFESSIONAL TEAM',
-    zzz_card1_title: 'Stage & Concert',
-    zzz_card1_quote: 'Dân Chơi Dân Ca 9830×2868 LED, ATVNCG 3D & DIFF 2026.',
-    zzz_card2_title: 'Commercial Motion',
-    zzz_card2_quote: "Whether it's 9:16 social ads or 9600×2000 OOH LEDs, I'm proficient with both!",
-    zzz_card3_title: 'Brand & 3D Mascots',
-    zzz_card3_quote: 'Ready for combat · 20 Case Studies (2022–2026).',
-    zzz_team_leader: 'TEAM LEADER',
-    btn_watch_reel: '▶ WATCH SHOWREEL',
-    btn_explore_works: '20 CASE STUDIES ↓',
-    ratecard_eyebrow: 'INTER-KNOT COMMISSION BOARD · OFFICIAL RATECARD',
-    ratecard_heading: '2026 Freelance Key Visual, 3D & Motion Packages',
-    ratecard_cta: 'POST A COMMISSION ↗',
-    works_eyebrow: 'SELECTED WORKS (2022 – 2026) · 4 CORE PILLARS',
-    works_heading: 'Featured Projects & Case Studies',
+    menu_sections_label: 'MAIN SECTIONS (3)',
+    nav_s1_title: 'INFO & SHOWREEL',
+    nav_s2_title: 'PROJECT GALLERY',
+    nav_s3_title: 'CV & CONTACT',
+    menu_filters_label: 'QUICK GALLERY FILTER',
+    btn_download_cv: 'DOWNLOAD 2026 CV (PDF) ↗',
+    hero_btn_gallery: 'EXPLORE ALL 20 PROJECTS ↓',
+    hero_btn_cv: 'CV & CONTACT →',
+    reel_heading: '2026 Motion & Concert Stage Visuals Showreel',
+    works_eyebrow: 'SECTION 02 // COMPLETE ARCHIVE (2022 – 2026)',
+    works_heading: 'All Projects & Stage Visuals Gallery',
+    works_sub: 'Click any project card to open the full Case Study (technical specs, LED resolutions, role, studio credits, and visual breakdowns).',
     cat_all: 'All Works',
     cat_stage: 'Concert & Stage Visuals',
     cat_commercial: 'Commercial Motion & LED',
     cat_brand: 'Brand Identity & Key Visuals',
     cat_3d: '3D Mascots, Editorial & Community',
-    reel_eyebrow: 'SPECIAL COMMISSION REEL · 2026 SHOWREEL & MOTION LAB',
-    reel_heading: 'Motion & Stage Visuals Showreel',
-    reel_sub: 'A curated compilation of 2D/3D motion graphics, commercial ad campaigns, concert LED visualizers, and 3D product animations.',
-    lab_heading: 'Commercial Motion, 3D Clips & Social Reels',
-    lab_sub: 'Hover or tap any video window to play. Featuring short-form performance ads at Shuttlerock, 3D Visual Community pieces, and product TVCs.',
-    exp_eyebrow: 'FULL CONFIDANT DOSSIER · 2018 – 2026',
-    exp_heading: 'Experience Timeline, Education & Skills',
-    btn_download_cv: 'Download 2026 CV (PDF) ↗',
+    lab_heading: 'Commercial Motion, 3D Clips & Social Reels (6 Clips)',
+    exp_eyebrow: 'SECTION 03 // FULL CV DOSSIER & COMMISSION CONTACT',
+    exp_heading: 'Curriculum Vitae, Ratecard & Contact',
     exp_timeline_title: 'Professional Experience (2022 – 2026)',
     edu_title: 'Education',
     skills_motion_title: 'Motion & 3D Stage Visuals',
     skills_brand_title: 'Design, Brand & AI Workflow',
-    contact_eyebrow: 'INTER-KNOT COMMISSION · SEND A CALLING CARD',
+    ratecard_eyebrow: 'OFFICIAL FREELANCE PACKAGES',
+    ratecard_heading: '2026 Key Visual, 3D & Motion Ratecard',
+    contact_eyebrow: 'DIRECT CONTACT & SOCIAL CHANNELS',
     contact_heading: 'Ready to bring bold motion & stage visuals to your next project?',
     contact_sub: 'Available for full-time opportunities, concert stage LED visuals, 2D/3D commercial motion, 3D mascot modeling, and brand identity systems.',
     form_name: 'YOUR NAME / STUDIO',
     form_email: 'EMAIL ADDRESS',
     form_type: 'COMMISSION CATEGORY',
     form_msg: 'PROJECT BRIEF & TIMELINE',
-    form_submit: 'SEND CALLING CARD ↗'
+    form_submit: 'SEND MESSAGE ↗'
   },
   vi: {
-    nav_lobby: '01 · GOLD MEMBER',
-    nav_work: '02 · P5 COMMAND & DỰ ÁN',
-    nav_reel: '03 · SHOWREEL',
-    nav_about: '04 · HỒ SƠ CONFIDANT',
-    nav_contact: '05 · LIÊN HỆ',
-    zzz_tab_home: 'TRANG CHỦ',
-    zzz_tab_gold: 'THÀNH VIÊN VÀNG',
-    zzz_tab_rating: 'BẢNG GIÁ DỊCH VỤ',
-    zzz_pro_team: 'ĐỘI NGŨ CHUYÊN NGHIỆP',
-    zzz_card1_title: 'Visual Sân Khấu',
-    zzz_card1_quote: 'Dân Chơi Dân Ca 9830×2868 LED, ATVNCG 3D & DIFF 2026.',
-    zzz_card2_title: 'Motion Thương Mại',
-    zzz_card2_quote: 'Từ video ngắn 9:16 đến màn hình LED 9600×2000 ngoài trời!',
-    zzz_card3_title: 'Thương Hiệu & 3D',
-    zzz_card3_quote: 'Sẵn sàng tác chiến · 20 Dự Án Tiêu Biểu (2022–2026).',
-    zzz_team_leader: 'TRƯỞNG NHÓM',
-    btn_watch_reel: '▶ XEM SHOWREEL',
-    btn_explore_works: '20 DỰ ÁN TIÊU BIỂU ↓',
-    ratecard_eyebrow: 'BẢNG ỦY THÁC INTER-KNOT · BÁO GIÁ CHÍNH THỨC',
-    ratecard_heading: 'Gói Thiết Kế Key Visual, 3D & Motion 2026',
-    ratecard_cta: 'ĐẶT LỊCH DỰ ÁN ↗',
-    works_eyebrow: 'DỰ ÁN TIÊU BIỂU (2022 – 2026) · 4 TRỤ CỘT CHÍNH',
-    works_heading: 'Hồ Sơ Dự Án & Case Studies',
+    menu_sections_label: '3 PHẦN CHÍNH',
+    nav_s1_title: 'GIỚI THIỆU & SHOWREEL',
+    nav_s2_title: 'THƯ VIỆN DỰ ÁN (20)',
+    nav_s3_title: 'HỒ SƠ CV & LIÊN HỆ',
+    menu_filters_label: 'LỌC NHANH DỰ ÁN',
+    btn_download_cv: 'TẢI CV 2026 (PDF) ↗',
+    hero_btn_gallery: 'XEM TOÀN BỘ 20 DỰ ÁN ↓',
+    hero_btn_cv: 'HỒ SƠ CV & LIÊN HỆ →',
+    reel_heading: 'Showreel Motion & Visual Sân Khấu Concert 2026',
+    works_eyebrow: 'PHẦN 02 // TOÀN BỘ DỰ ÁN ĐÃ THỰC HIỆN (2022 – 2026)',
+    works_heading: 'Thư Viện Toàn Bộ Dự Án & Visual Sân Khấu',
+    works_sub: 'Nhấn vào từng thẻ dự án để xem chi tiết Case Study (thông số LED, vai trò, studio hợp tác và hình ảnh/video).',
     cat_all: 'Tất Cả',
     cat_stage: 'Visual Sân Khấu & Concert',
     cat_commercial: 'Motion Thương Mại & LED',
     cat_brand: 'Nhận Diện & Key Visual',
     cat_3d: '3D Mascot, Dàn Trang & Cộng Đồng',
-    reel_eyebrow: 'SHOWREEL ĐẶC BIỆT · MOTION & VISUAL SÂN KHẤU 2026',
-    reel_heading: 'Showreel Motion & Visual Sân Khấu',
-    reel_sub: 'Tổng hợp các dự án 2D/3D Motion Graphics, chiến dịch quảng cáo thương mại, LED sân khấu concert và diễn hoạt sản phẩm 3D.',
-    lab_heading: 'Thư Viện Video Motion, 3D Clips & Social Reels',
-    lab_sub: 'Di chuột hoặc chạm vào từng khung video để phát. Bao gồm quảng cáo hiệu suất tại Shuttlerock, tác phẩm 3D cộng đồng và TVC.',
-    exp_eyebrow: 'HỒ SƠ CONFIDANT TOÀN DIỆN · 2018 – 2026',
-    exp_heading: 'Kinh Nghiệm, Học Vấn & Hệ Thống Kỹ Năng',
-    btn_download_cv: 'Tải CV 2026 (PDF) ↗',
-    exp_timeline_title: 'Quá Trình Làm Việc (2022 – 2026)',
+    lab_heading: 'Video Motion Thương Mại, 3D Clips & Social Reels (6 Clips)',
+    exp_eyebrow: 'PHẦN 03 // HỒ SƠ NĂNG LỰC (CV) & LIÊN HỆ HỢP TÁC',
+    exp_heading: 'Kinh Nghiệm Làm Việc, Bảng Giá & Liên Hệ',
+    exp_timeline_title: 'Kinh Nghiệm Chuyên Môn (2022 – 2026)',
     edu_title: 'Học Vấn',
     skills_motion_title: 'Motion & 3D Visual Sân Khấu',
     skills_brand_title: 'Thiết Kế, Thương Hiệu & Quy Trình AI',
-    contact_eyebrow: 'ỦY THÁC INTER-KNOT · GỬI THIỆP CALLING CARD',
+    ratecard_eyebrow: 'BẢNG GIÁ DỊCH VỤ FREELANCE',
+    ratecard_heading: 'Gói Thiết Kế Key Visual, 3D & Motion 2026',
+    contact_eyebrow: 'LIÊN HỆ TRỰC TIẾP & MẠNG XÃ HỘI',
     contact_heading: 'Sẵn sàng bùng nổ thị giác cho dự án tiếp theo của bạn?',
     contact_sub: 'Sẵn sàng hợp tác toàn thời gian hoặc dự án freelance: Visual sân khấu LED, 2D/3D Motion thương mại, dựng 3D Mascot và nhận diện thương hiệu.',
     form_name: 'TÊN CỦA BẠN / STUDIO',
     form_email: 'ĐỊA CHỈ EMAIL',
     form_type: 'HẠNG MỤC HỢP TÁC',
     form_msg: 'MÔ TẢ DỰ ÁN & TIẾN ĐỘ',
-    form_submit: 'GỬI YÊU CẦU HỢP TÁC ↗'
+    form_submit: 'GỬI TIN NHẮN HỢP TÁC ↗'
   }
 };
 
-// Local images known to exist in WEB/assets/images/
+// Hero "<LB ○ • • RB>" Status Slides
+const HERO_SLIDES = [
+  {
+    kanji: '節制',
+    lv: '30',
+    role: {
+      en: 'MULTIDISCIPLINARY MOTION DESIGNER',
+      vi: 'NHÀ THIẾT KẾ CHUYỂN ĐỘNG ĐA LĨNH VỰC'
+    },
+    bio: {
+      en: '5+ years crafting arena-scale Concert Stage LED Visuals (Dân Chơi Dân Ca 9830×2868, ATVNCG, DIFF 2026), 2D/3D Commercial Motion (Shuttlerock, Goofi Team), and Brand Systems (Bloomberg Businessweek VN, FLOW Ecosystem).',
+      vi: 'Hơn 5 năm kinh nghiệm sản xuất Visual LED sân khấu concert quy mô lớn (Dân Chơi Dân Ca 9830×2868, ATVNCG, DIFF 2026), 2D/3D Motion thương mại (Shuttlerock, Goofi Team) và Hệ thống nhận diện thương hiệu (Bloomberg Businessweek VN, FLOW).'
+    },
+    img: 'assets/images/portrait-hoang.jpg'
+  },
+  {
+    kanji: '魔術師',
+    lv: '99',
+    role: {
+      en: 'CONCERT STAGE VISUALS & 9830×2868 LED MAPPING',
+      vi: 'VISUAL SÂN KHẤU CONCERT & LED MAPPING 9830×2868'
+    },
+    bio: {
+      en: 'Engineered multi-zone 9830×2868 stage LED visuals and seamless 3D Blender environments with Goofi Team for Dân Chơi Dân Ca Hanoi, Anh Trai Vượt Ngàn Chông Gai (Let Me Go), DIFF 2026, BINI, Trạm Yêu, and Chi Pu.',
+      vi: 'Thiết kế hệ thống LED mapping đa vùng 9830×2868 và không gian 3D Blender cùng Goofi Team cho đại nhạc hội Dân Chơi Dân Ca Hà Nội, Anh Trai Vượt Ngàn Chông Gai (Let Me Go), DIFF 2026, BINI, Trạm Yêu và Chi Pu.'
+    },
+    img: 'assets/images/goofi-atvncg-1.jpg'
+  },
+  {
+    kanji: '皇帝',
+    lv: '85',
+    role: {
+      en: 'COMMERCIAL MOTION, 3D MASCOTS & BRAND SYSTEMS',
+      vi: 'MOTION THƯƠNG MẠI, 3D MASCOT & THƯƠNG HIỆU'
+    },
+    bio: {
+      en: 'Mid-level Motion Designer at Shuttlerock animating global campaigns across 6 markets, alongside theatrical SkyLED 3464×288 motion (NHSNH Film), 9600×2000 OOH LEDs (Selsun, Nam Á Bank), and 3D Mascots (Buddy Pickleball, Gadopax).',
+      vi: 'Mid-level Motion Designer tại Shuttlerock thực hiện chiến dịch cho 6 thị trường quốc tế, kết hợp motion phim điện ảnh SkyLED 3464×288 (Phim NHSNH), LED 9600×2000 (Selsun, Nam Á Bank) và linh vật 3D (Buddy Pickleball, Gadopax).'
+    },
+    img: 'assets/images/buddy-render-1.jpg'
+  }
+];
+
 const KNOWN_LOCAL_IMAGES = new Set([
   'assets/images/bbwv-emag-1.jpg',
   'assets/images/bbwv-emag-2.jpg',
@@ -1509,22 +1526,22 @@ const CATEGORY_LABELS = {
   'stage-visuals': {
     en: 'Concert & Stage Visuals',
     vi: 'Visual Sân Khấu & Concert',
-    equip: 'GUN ★ STAGE LED'
+    equip: 'STAGE LED VISUAL'
   },
   'commercial-motion': {
     en: 'Commercial Motion & LED',
     vi: 'Motion Thương Mại & LED',
-    equip: 'PROTECTOR ★ MOTION LED'
+    equip: 'COMMERCIAL MOTION'
   },
   'brand-identity': {
     en: 'Brand Identity & Key Visuals',
     vi: 'Nhận Diện & Key Visual',
-    equip: 'ACCESSORY ★ BRAND KV'
+    equip: 'BRAND & KEY VISUAL'
   },
   '3d-editorial-community': {
     en: '3D Mascots, Editorial & Community',
     vi: '3D Mascot, Dàn Trang & Cộng Đồng',
-    equip: 'CLOTHES ★ 3D & EDITORIAL'
+    equip: '3D & EDITORIAL'
   }
 };
 
@@ -1533,29 +1550,139 @@ let portfolioData = FALLBACK_PORTFOLIO_DATA;
 let currentLang = 'en';
 let activeCategory = 'all';
 let searchQuery = '';
-let activeConfidantId = 'shuttlerock';
+let heroSlideIdx = 0;
 
-// DOM Elements
+// DOM References
+const leftMenuSystem = document.getElementById('left-menu-system');
+const leftMenuToggle = document.getElementById('left-menu-toggle');
+const leftMenuDrawer = document.getElementById('left-menu-drawer');
+const drawerCloseBtn = document.getElementById('drawer-close-btn');
+const leftMenuBackdrop = document.getElementById('left-menu-backdrop');
+
 const gridEl = document.getElementById('projects-grid');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const searchInput = document.getElementById('project-search');
 const modalEl = document.getElementById('project-modal');
 const modalContentEl = document.getElementById('modal-content');
 const modalCloseBtn = document.getElementById('modal-close');
-const p5RosterBtns = document.querySelectorAll('.p5-roster-btn');
-const p5EquipSlots = document.querySelectorAll('.p5-equip-slot');
-const p5CommandPrompt = document.getElementById('p5-command-prompt');
 
-// Helper: Get localized text
 function tObj(val) {
   if (!val) return '';
   if (typeof val === 'string') return val;
   return val[currentLang] || val.en || '';
 }
 
-// Helper: Build Persona 5 / Stage LED Graphic Fallback Poster HTML
+// =========================================================================
+// LEFT-SIDE COLLAPSIBLE MENU CONTROLS
+// =========================================================================
+function setLeftMenuOpen(isOpen) {
+  if (!leftMenuSystem || !leftMenuToggle || !leftMenuDrawer) return;
+  leftMenuSystem.classList.toggle('open', isOpen);
+  leftMenuToggle.setAttribute('aria-expanded', String(isOpen));
+  leftMenuDrawer.setAttribute('aria-hidden', String(!isOpen));
+}
+
+if (leftMenuToggle) {
+  leftMenuToggle.addEventListener('click', () => {
+    const isOpen = leftMenuSystem?.classList.contains('open');
+    setLeftMenuOpen(!isOpen);
+  });
+}
+if (drawerCloseBtn) {
+  drawerCloseBtn.addEventListener('click', () => setLeftMenuOpen(false));
+}
+if (leftMenuBackdrop) {
+  leftMenuBackdrop.addEventListener('click', () => setLeftMenuOpen(false));
+}
+
+document.querySelectorAll('.drawer-link').forEach((link) => {
+  link.addEventListener('click', () => setLeftMenuOpen(false));
+});
+
+document.querySelectorAll('.drawer-filter-btn').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const cat = btn.dataset.quickFilter || 'all';
+    setCategoryFilter(cat);
+    setLeftMenuOpen(false);
+    document.getElementById('sec-gallery')?.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// =========================================================================
+// SECTION 1: PERSONA 3 RELOAD HERO SLIDES (<LB ○ • • RB> & LEADER BADGE)
+// =========================================================================
+function renderHeroSlide(idx) {
+  heroSlideIdx = (idx + HERO_SLIDES.length) % HERO_SLIDES.length;
+  const slide = HERO_SLIDES[heroSlideIdx];
+
+  document.querySelectorAll('.p3r-dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === heroSlideIdx);
+  });
+
+  const kanjiEl = document.querySelector('.p3r-arcana-kanji');
+  const lvEl = document.querySelector('.p3r-lv-text strong');
+  const roleEl = document.getElementById('hero-role-text');
+  const bioEl = document.getElementById('hero-bio-text');
+  const mainImg = document.getElementById('p3r-main-img');
+  const echoImg = document.getElementById('p3r-echo-img');
+
+  if (kanjiEl) kanjiEl.textContent = slide.kanji;
+  if (lvEl) lvEl.textContent = slide.lv;
+  if (roleEl) roleEl.textContent = tObj(slide.role);
+  if (bioEl) bioEl.textContent = tObj(slide.bio);
+  if (mainImg) mainImg.src = slide.img;
+  if (echoImg) echoImg.src = slide.img;
+}
+
+document.getElementById('p3r-prev-tab')?.addEventListener('click', () => {
+  renderHeroSlide(heroSlideIdx - 1);
+});
+document.getElementById('p3r-next-tab')?.addEventListener('click', () => {
+  renderHeroSlide(heroSlideIdx + 1);
+});
+document.getElementById('p3r-cycle-portrait-btn')?.addEventListener('click', () => {
+  renderHeroSlide(heroSlideIdx + 1);
+});
+document.querySelectorAll('.p3r-dot').forEach((dot) => {
+  dot.addEventListener('click', () => {
+    renderHeroSlide(Number(dot.dataset.heroSlide || 0));
+  });
+});
+
+// Showreel Mode Switcher (Local MP4 vs YouTube Embed)
+const reelBtnLocal = document.getElementById('reel-btn-local');
+const reelBtnYt = document.getElementById('reel-btn-yt');
+const reelLocalWrap = document.getElementById('reel-local-wrap');
+const reelYtWrap = document.getElementById('reel-yt-wrap');
+const reelYtIframe = document.getElementById('reel-yt-iframe');
+const heroShowreelVideo = document.getElementById('hero-showreel-video');
+
+if (reelBtnLocal && reelBtnYt && reelLocalWrap && reelYtWrap) {
+  reelBtnLocal.addEventListener('click', () => {
+    reelBtnLocal.classList.add('active');
+    reelBtnYt.classList.remove('active');
+    reelLocalWrap.hidden = false;
+    reelYtWrap.hidden = true;
+    if (reelYtIframe) reelYtIframe.src = '';
+  });
+
+  reelBtnYt.addEventListener('click', () => {
+    reelBtnYt.classList.add('active');
+    reelBtnLocal.classList.remove('active');
+    reelLocalWrap.hidden = true;
+    reelYtWrap.hidden = false;
+    if (heroShowreelVideo) heroShowreelVideo.pause();
+    if (reelYtIframe && reelYtIframe.dataset.src) {
+      reelYtIframe.src = reelYtIframe.dataset.src;
+    }
+  });
+}
+
+// =========================================================================
+// SECTION 2: COMPLETE PROJECT GALLERY (20 PROJECTS + FALLBACK POSTERS)
+// =========================================================================
 function buildFallbackPosterHtml(project) {
-  const catInfo = CATEGORY_LABELS[project.category] || { equip: 'PHANTOM ★ TARGET' };
+  const catInfo = CATEGORY_LABELS[project.category] || { equip: 'STAGE & MOTION' };
   const titleText = tObj(project.title);
   return `
     <div class="project-fallback-poster" data-cat="${project.category}">
@@ -1564,16 +1691,15 @@ function buildFallbackPosterHtml(project) {
         <span class="fallback-studio-chip">${project.studio || project.client}</span>
       </div>
       <div class="fallback-center-blueprint">
-        <span class="fallback-spec-code">▣ ${project.specs || catInfo.equip}</span>
+        <span class="fallback-spec-code">◆ ${project.specs || catInfo.equip}</span>
         <h4 class="fallback-poster-title">${titleText}</h4>
       </div>
     </div>
   `;
 }
 
-// Update Category Badges Count
 function updateCategoryCounts() {
-  if (!portfolioData || !portfolioData.projects) return;
+  if (!portfolioData?.projects) return;
   const projects = portfolioData.projects;
   const counts = {
     all: projects.length,
@@ -1589,37 +1715,16 @@ function updateCategoryCounts() {
   });
 }
 
-// Sync Filter Across Filter Tabs, P5 Roster, and P5 Equipment Slots
-function setCategoryFilter(category, shouldScroll = false) {
+function setCategoryFilter(category) {
   activeCategory = category;
-
   filterBtns.forEach((b) => {
     b.classList.toggle('active', b.dataset.filter === category);
   });
-
-  p5RosterBtns.forEach((b) => {
-    if (b.dataset.filter) {
-      b.classList.toggle('active', b.dataset.filter === category);
-      if (b.dataset.filter === category && p5CommandPrompt && b.dataset.jpName) {
-        p5CommandPrompt.textContent = `どの装備を変更する？ · ${b.dataset.jpName}`;
-      }
-    }
-  });
-
-  p5EquipSlots.forEach((slot) => {
-    slot.classList.toggle('active', slot.dataset.equipFilter === category);
-  });
-
   renderProjects();
-
-  if (shouldScroll) {
-    document.getElementById('projects-deck')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
 }
 
-// Render Bento Selected Works Grid
 function renderProjects() {
-  if (!gridEl || !portfolioData || !portfolioData.projects) return;
+  if (!gridEl || !portfolioData?.projects) return;
   const q = searchQuery.trim().toLowerCase();
 
   const filtered = portfolioData.projects.filter((project) => {
@@ -1642,7 +1747,7 @@ function renderProjects() {
 
   if (filtered.length === 0) {
     gridEl.innerHTML = `
-      <div style="grid-column: 1 / -1; text-align: center; padding: 48px 20px; color: #a1a1aa; border: 2px dashed #333; border-radius: 12px;">
+      <div style="grid-column: 1 / -1; text-align: center; padding: 48px 20px; color: #93c5fd; border: 2px dashed rgba(0,229,255,0.3); border-radius: 12px;">
         <p>${currentLang === 'vi' ? 'Không tìm thấy dự án phù hợp. Hãy thử xóa từ khóa hoặc chuyển danh mục.' : 'No projects matched your filter. Try clearing the search box or switching categories.'}</p>
       </div>
     `;
@@ -1707,9 +1812,8 @@ function renderProjects() {
   });
 }
 
-// Open Case Study Modal
 function openProjectModal(projectId) {
-  if (!portfolioData || !portfolioData.projects) return;
+  if (!portfolioData?.projects) return;
   const project = portfolioData.projects.find((p) => p.id === projectId);
   if (!project) return;
 
@@ -1737,7 +1841,7 @@ function openProjectModal(projectId) {
               `<img src="${imgSrc}" alt="${titleText} — Visual ${idx + 1}" loading="lazy" />`
           )
           .join('')
-      : `<div style="height: 240px; border-radius: 10px; overflow: hidden; border: 2px solid #353542;">${buildFallbackPosterHtml(project)}</div>`;
+      : `<div style="height: 240px; border-radius: 10px; overflow: hidden; border: 2px solid rgba(0,229,255,0.35);">${buildFallbackPosterHtml(project)}</div>`;
 
   const highlightsHtml =
     highlightsArr.length > 0
@@ -1798,85 +1902,9 @@ function closeProjectModal() {
   document.body.style.overflow = '';
 }
 
-// Render Ratecard Strip from data/projects.json
-function renderRatecard() {
-  const ratecardGrid = document.getElementById('ratecard-grid');
-  if (!ratecardGrid || !portfolioData?.profile?.ratecard) return;
-
-  ratecardGrid.innerHTML = portfolioData.profile.ratecard
-    .map(
-      (item) => `
-      <div class="zzz-rate-card ${item.featured ? 'featured' : ''}">
-        <div class="zzz-rate-top">
-          <span class="zzz-rate-tier">${item.tier}</span>
-          <strong class="zzz-rate-price">${item.price}</strong>
-        </div>
-        <h4>${tObj(item.title)}</h4>
-        <ul>
-          <li><strong>${currentLang === 'vi' ? 'Thời gian:' : 'Turnaround:'}</strong> ${tObj(item.turnaround)}</li>
-          <li><strong>${currentLang === 'vi' ? 'Chỉnh sửa:' : 'Revisions:'}</strong> ${tObj(item.revisions)}</li>
-          <li><strong>${currentLang === 'vi' ? 'Ưu đãi:' : 'Bonus:'}</strong> ${tObj(item.bonus)}</li>
-          <li><strong>${currentLang === 'vi' ? 'Bàn giao:' : 'Deliverables:'}</strong> ${tObj(item.deliverables)}</li>
-        </ul>
-      </div>
-    `
-    )
-    .join('');
-}
-
-// Render Persona 5 Confidant Screen & Experience Timeline
-function renderConfidant(confId) {
-  if (!portfolioData?.profile?.experience) return;
-  const expList = portfolioData.profile.experience;
-  const exp = expList.find((item) => item.id === confId) || expList[0];
-  if (!exp) return;
-
-  activeConfidantId = exp.id;
-
-  document.querySelectorAll('.conf-tab-btn').forEach((btn) => {
-    btn.classList.toggle('active', btn.dataset.conf === exp.id);
-  });
-
-  const arcParts = (exp.arcana || 'VIII · LA JUSTICE').split('·');
-  const tarotNumEl = document.getElementById('p5-tarot-num');
-  const tarotNameEl = document.getElementById('p5-tarot-name');
-  if (tarotNumEl) tarotNumEl.textContent = (arcParts[0] || 'VIII').trim();
-  if (tarotNameEl) tarotNameEl.textContent = (arcParts[1] || 'LA JUSTICE').trim();
-
-  const fullnameEl = document.getElementById('p5-conf-fullname');
-  const jobEl = document.getElementById('p5-conf-job');
-  const rankEl = document.getElementById('p5-conf-rank');
-  const starsEl = document.getElementById('p5-conf-stars');
-  const crewQuoteEl = document.getElementById('p5-crew-quote');
-  const recapEl = document.getElementById('p5-conf-recap');
-  const s1El = document.getElementById('p5-skill-1');
-  const s2El = document.getElementById('p5-skill-2');
-  const s3El = document.getElementById('p5-skill-3');
-  const nextEl = document.getElementById('p5-next-skill');
-
-  if (fullnameEl) {
-    fullnameEl.textContent = `${portfolioData.profile.fullName} · ${exp.company} (${exp.period})`;
-  }
-  if (jobEl) jobEl.textContent = exp.jobTitle || exp.role.toUpperCase();
-  if (rankEl) rankEl.textContent = exp.rank || 9;
-
-  if (starsEl) {
-    const r = exp.rank || 9;
-    let starsHtml = '';
-    for (let i = 1; i <= 10; i++) {
-      starsHtml += i <= r ? '★ ' : '<span class="star-dim">★</span> ';
-    }
-    starsEl.innerHTML = starsHtml.trim();
-  }
-
-  if (crewQuoteEl) crewQuoteEl.textContent = tObj(exp.crewQuote);
-  if (recapEl) recapEl.textContent = tObj(exp.recap);
-  if (s1El && exp.skills?.[0]) s1El.textContent = exp.skills[0];
-  if (s2El && exp.skills?.[1]) s2El.textContent = exp.skills[1];
-  if (s3El && exp.skills?.[2]) s3El.textContent = exp.skills[2];
-  if (nextEl) nextEl.textContent = exp.nextAbility || 'Global Creative Direction';
-}
-
+// =========================================================================
+// SECTION 3: CV TIMELINE, SKILLS & RATECARD RENDERERS
+// =========================================================================
 function renderTimelineAndSkills() {
   const timelineListEl = document.getElementById('timeline-list');
   if (timelineListEl && portfolioData?.profile?.experience) {
@@ -1917,7 +1945,34 @@ function renderTimelineAndSkills() {
   }
 }
 
-// Apply Language (EN / VI)
+function renderRatecard() {
+  const ratecardGrid = document.getElementById('ratecard-grid');
+  if (!ratecardGrid || !portfolioData?.profile?.ratecard) return;
+
+  ratecardGrid.innerHTML = portfolioData.profile.ratecard
+    .map(
+      (item) => `
+      <div class="zzz-rate-card ${item.featured ? 'featured' : ''}">
+        <div class="zzz-rate-top">
+          <span class="zzz-rate-tier">${item.tier}</span>
+          <strong class="zzz-rate-price">${item.price}</strong>
+        </div>
+        <h4>${tObj(item.title)}</h4>
+        <ul>
+          <li><strong>${currentLang === 'vi' ? 'Thời gian:' : 'Turnaround:'}</strong> ${tObj(item.turnaround)}</li>
+          <li><strong>${currentLang === 'vi' ? 'Chỉnh sửa:' : 'Revisions:'}</strong> ${tObj(item.revisions)}</li>
+          <li><strong>${currentLang === 'vi' ? 'Ưu đãi:' : 'Bonus:'}</strong> ${tObj(item.bonus)}</li>
+          <li><strong>${currentLang === 'vi' ? 'Bàn giao:' : 'Deliverables:'}</strong> ${tObj(item.deliverables)}</li>
+        </ul>
+      </div>
+    `
+    )
+    .join('');
+}
+
+// =========================================================================
+// LANGUAGE SWITCHER (EN / VI)
+// =========================================================================
 function applyLanguage(lang) {
   currentLang = lang;
   document.documentElement.lang = lang;
@@ -1934,154 +1989,19 @@ function applyLanguage(lang) {
     }
   });
 
-  if (portfolioData?.profile) {
-    const roleEl = document.getElementById('hero-role-text');
-    const taglineEl = document.getElementById('hero-tagline-text');
-    const bioEl = document.getElementById('hero-bio-text');
-
-    if (roleEl) roleEl.textContent = tObj(portfolioData.profile.role);
-    if (taglineEl) taglineEl.textContent = tObj(portfolioData.profile.tagline);
-    if (bioEl) {
-      if (lang === 'vi') {
-        bioEl.innerHTML = `Motion Designer đa lĩnh vực với <span class="zzz-hl-pink">hơn 5 năm kinh nghiệm</span> trong thiết kế hệ thống nhận diện thương hiệu, chiến dịch e-commerce và <span class="zzz-hl-pink">sản xuất visual LED mapping 9830×2868 sân khấu concert &amp; không gian 3D Blender</span> tại Shuttlerock, Goofi Team và Bloomberg Businessweek Vietnam.`;
-      } else {
-        bioEl.innerHTML = `The creative lead of Aldur Studio (5+ yrs exp). He has <span class="zzz-hl-pink">exceptional 9830×2868 concert LED mapping &amp; 2D/3D motion skills</span>, is adept at organizing and <span class="zzz-hl-pink">directing brand ecosystems, summit Key Visuals &amp; 3D mascots</span> across Shuttlerock, Goofi Team &amp; Bloomberg Businessweek VN!`;
-      }
-    }
-  }
-
-  renderRatecard();
+  renderHeroSlide(heroSlideIdx);
   renderProjects();
-  renderConfidant(activeConfidantId);
   renderTimelineAndSkills();
+  renderRatecard();
 }
 
-// =========================================================================
-// EVENT LISTENERS & INTERACTIVE CONTROLS
-// =========================================================================
-
-// Language Toggle Buttons
 document.querySelectorAll('.lang-btn').forEach((btn) => {
   btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
 });
 
-// ZZZ Retro Browser Controls (Halftone Toggle & Leader Portrait Switch)
-const zzzCreamSheet = document.getElementById('zzz-cream-sheet');
-const zzzToggleHalftoneBtn = document.getElementById('zzz-toggle-halftone');
-
-if (zzzToggleHalftoneBtn && zzzCreamSheet) {
-  zzzToggleHalftoneBtn.addEventListener('click', () => {
-    zzzCreamSheet.classList.toggle('color-mode');
-  });
-}
-
-const leaderPortraits = [
-  'assets/images/portrait-hoang.jpg',
-  'assets/images/buddy-render-1.jpg',
-  'assets/images/goofi-atvncg-1.jpg'
-];
-let leaderPortraitIdx = 0;
-const zzzLeaderImg = document.getElementById('zzz-leader-img');
-const zzzPortraitSwitchBtn = document.getElementById('zzz-portrait-switch-btn');
-const zzzCycleLeaderBtn = document.getElementById('zzz-cycle-leader-btn');
-
-function cycleLeaderPortrait() {
-  leaderPortraitIdx = (leaderPortraitIdx + 1) % leaderPortraits.length;
-  if (zzzLeaderImg) {
-    zzzLeaderImg.src = leaderPortraits[leaderPortraitIdx];
-  }
-}
-
-if (zzzPortraitSwitchBtn) zzzPortraitSwitchBtn.addEventListener('click', cycleLeaderPortrait);
-if (zzzCycleLeaderBtn) zzzCycleLeaderBtn.addEventListener('click', cycleLeaderPortrait);
-
-// ZZZ Left Stack 3 Windows -> Jump & Filter Selected Works
-document.querySelectorAll('.zzz-small-win').forEach((card) => {
-  const filterCat = card.dataset.jumpFilter;
-  if (!filterCat) return;
-  card.addEventListener('click', () => setCategoryFilter(filterCat, true));
-  card.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      setCategoryFilter(filterCat, true);
-    }
-  });
-});
-
-// Hero "WATCH SHOWREEL" Button
-const openShowreelBtn = document.getElementById('open-showreel-modal-btn');
-if (openShowreelBtn) {
-  openShowreelBtn.addEventListener('click', () => {
-    const showreelSec = document.getElementById('showreel');
-    showreelSec?.scrollIntoView({ behavior: 'smooth' });
-    const vid = document.getElementById('hero-showreel-video');
-    if (vid) {
-      vid.play().catch(() => {});
-    }
-  });
-}
-
-// Showreel Mode Switcher (Local MP4 vs YouTube Embed)
-const reelBtnLocal = document.getElementById('reel-btn-local');
-const reelBtnYt = document.getElementById('reel-btn-yt');
-const reelLocalWrap = document.getElementById('reel-local-wrap');
-const reelYtWrap = document.getElementById('reel-yt-wrap');
-const reelYtIframe = document.getElementById('reel-yt-iframe');
-const heroShowreelVideo = document.getElementById('hero-showreel-video');
-
-if (reelBtnLocal && reelBtnYt && reelLocalWrap && reelYtWrap) {
-  reelBtnLocal.addEventListener('click', () => {
-    reelBtnLocal.classList.add('active');
-    reelBtnYt.classList.remove('active');
-    reelLocalWrap.hidden = false;
-    reelYtWrap.hidden = true;
-    if (reelYtIframe) reelYtIframe.src = '';
-  });
-
-  reelBtnYt.addEventListener('click', () => {
-    reelBtnYt.classList.add('active');
-    reelBtnLocal.classList.remove('active');
-    reelLocalWrap.hidden = true;
-    reelYtWrap.hidden = false;
-    if (heroShowreelVideo) heroShowreelVideo.pause();
-    if (reelYtIframe && reelYtIframe.dataset.src) {
-      reelYtIframe.src = reelYtIframe.dataset.src;
-    }
-  });
-}
-
-// Persona 5 COMMAND Roster & Equipment Slots
-p5RosterBtns.forEach((btn) => {
-  btn.addEventListener('mouseenter', () => {
-    if (btn.dataset.filter) {
-      setCategoryFilter(btn.dataset.filter, false);
-    }
-  });
-  btn.addEventListener('click', () => {
-    if (btn.dataset.filter) {
-      setCategoryFilter(btn.dataset.filter, true);
-    } else if (btn.dataset.jump) {
-      document.querySelector(btn.dataset.jump)?.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-
-p5EquipSlots.forEach((slot) => {
-  slot.addEventListener('mouseenter', () => {
-    if (slot.dataset.equipFilter) {
-      setCategoryFilter(slot.dataset.equipFilter, false);
-    }
-  });
-  slot.addEventListener('click', () => {
-    if (slot.dataset.equipFilter) {
-      setCategoryFilter(slot.dataset.equipFilter, true);
-    }
-  });
-});
-
-// Filter Buttons & Search Input
+// Filter & Search Listeners
 filterBtns.forEach((btn) => {
-  btn.addEventListener('click', () => setCategoryFilter(btn.dataset.filter, false));
+  btn.addEventListener('click', () => setCategoryFilter(btn.dataset.filter));
 });
 
 if (searchInput) {
@@ -2091,13 +2011,7 @@ if (searchInput) {
   });
 }
 
-// Persona 5 Confidant Chapter Tabs
-document.querySelectorAll('.conf-tab-btn').forEach((btn) => {
-  btn.addEventListener('click', () => renderConfidant(btn.dataset.conf));
-  btn.addEventListener('mouseenter', () => renderConfidant(btn.dataset.conf));
-});
-
-// Modal Close Listeners
+// Modal Listeners
 if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeProjectModal);
 if (modalEl) {
   modalEl.addEventListener('click', (e) => {
@@ -2105,12 +2019,13 @@ if (modalEl) {
   });
 }
 window.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modalEl?.classList.contains('open')) {
-    closeProjectModal();
+  if (e.key === 'Escape') {
+    if (modalEl?.classList.contains('open')) closeProjectModal();
+    if (leftMenuSystem?.classList.contains('open')) setLeftMenuOpen(false);
   }
 });
 
-// Hover-to-play videos in Motion & 3D Lab
+// Hover-to-play videos in Motion & 3D Clips Sub-Gallery
 document.querySelectorAll('.hover-video').forEach((video) => {
   const card = video.closest('.video-card');
   if (!card) return;
@@ -2133,7 +2048,7 @@ if (commissionForm) {
       const email = document.getElementById('comm-email')?.value || '';
       const type = document.getElementById('comm-type')?.value || 'Creative Commission';
       const msg = document.getElementById('comm-msg')?.value || '';
-      const subject = encodeURIComponent(`[Portfolio Calling Card] ${type} — ${name}`);
+      const subject = encodeURIComponent(`[Portfolio Inquiry] ${type} — ${name}`);
       const body = encodeURIComponent(
         `Hi Aldur,\n\nName / Studio: ${name}\nEmail: ${email}\nCategory: ${type}\n\nProject Brief:\n${msg}`
       );
@@ -2142,28 +2057,28 @@ if (commissionForm) {
   });
 }
 
-// Top HUD Scroll Spy
-const hudLinks = document.querySelectorAll('.hud-link');
+// Scroll Spy for Left Menu 3 Sections
+const drawerLinks = document.querySelectorAll('.drawer-link');
 window.addEventListener(
   'scroll',
   () => {
-    const scrollY = window.scrollY + window.innerHeight * 0.32;
-    const sections = ['zzz-hub', 'p5-command', 'showreel', 'p5-confidant', 'contact'];
-    let currentSec = 'zzz-hub';
-    sections.forEach((id) => {
+    const scrollY = window.scrollY + window.innerHeight * 0.35;
+    const sectionIds = ['sec-hero', 'sec-gallery', 'sec-cv-contact'];
+    let currentId = 'sec-hero';
+    sectionIds.forEach((id) => {
       const el = document.getElementById(id);
       if (el && scrollY >= el.offsetTop) {
-        currentSec = id;
+        currentId = id;
       }
     });
-    hudLinks.forEach((link) => {
-      link.classList.toggle('active', link.dataset.sec === currentSec);
+    drawerLinks.forEach((link) => {
+      link.classList.toggle('active', link.dataset.sec === currentId);
     });
   },
   { passive: true }
 );
 
-// Background Music Player HUD
+// Background Music Player Toggle inside Left Menu
 const bgmAudio = document.getElementById('p3-bgm-audio');
 const bgmToggleBtn = document.getElementById('p3-bgm-toggle');
 const bgmTrackStatus = document.getElementById('bgm-track-status');
@@ -2172,14 +2087,12 @@ let bgmUserPaused = false;
 function updateBgmUi(isPlaying) {
   if (!bgmToggleBtn || !bgmTrackStatus) return;
   bgmToggleBtn.classList.toggle('playing', isPlaying);
-  bgmTrackStatus.textContent = isPlaying
-    ? '♪ Color Your Night / Rebel Mix'
-    : '❚❚ BGM PAUSED (CLICK TO PLAY)';
+  bgmTrackStatus.textContent = isPlaying ? '♪ ON' : '❚❚ OFF';
 }
 
 function tryStartBgm() {
   if (!bgmAudio || bgmUserPaused) return;
-  bgmAudio.volume = 0.38;
+  bgmAudio.volume = 0.36;
   bgmAudio
     .play()
     .then(() => updateBgmUi(true))
@@ -2191,7 +2104,7 @@ if (bgmToggleBtn && bgmAudio) {
     e.stopPropagation();
     if (bgmAudio.paused) {
       bgmUserPaused = false;
-      bgmAudio.volume = 0.38;
+      bgmAudio.volume = 0.36;
       bgmAudio.play().then(() => updateBgmUi(true)).catch(() => {});
     } else {
       bgmUserPaused = true;
@@ -2213,14 +2126,15 @@ if (bgmToggleBtn && bgmAudio) {
   );
 });
 
-// Bootstrap Data from data/projects.json
+// Initialize Portfolio Data
 async function initPortfolio() {
   try {
     const res = await fetch('data/projects.json');
-    if (!res.ok) throw new Error('Failed to fetch data/projects.json');
-    portfolioData = await res.json();
+    if (res.ok) {
+      portfolioData = await res.json();
+    }
   } catch (err) {
-    console.warn('Could not fetch data/projects.json via HTTP, check local server:', err);
+    console.warn('Using embedded fallback portfolio data:', err);
   }
 
   if (portfolioData) {

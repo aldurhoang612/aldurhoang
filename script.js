@@ -1342,11 +1342,15 @@ const FALLBACK_PORTFOLIO_DATA = {
 
 const UI_STRINGS = {
   en: {
-    menu_sections_label: 'MAIN SECTIONS (3)',
-    nav_s1_title: 'INFO & SHOWREEL',
-    nav_s2_title: 'PROJECT GALLERY',
-    nav_s3_title: 'CV & CONTACT',
-    menu_filters_label: 'QUICK GALLERY FILTER',
+    p3_m_leader: 'LEADER',
+    p3_m_reel: 'SHOWREEL',
+    p3_m_all: 'ALL WORKS',
+    p3_m_stage: 'STAGE LED',
+    p3_m_comm: 'COMMERCIAL',
+    p3_m_brand: 'BRAND & KV',
+    p3_m_3d: '3D & MASCOT',
+    p3_m_cv: 'CV & CONTACT',
+    p3_m_pdf: 'LOAD CV PDF',
     btn_download_cv: 'DOWNLOAD 2026 CV (PDF) ↗',
     hero_btn_gallery: 'EXPLORE ALL 20 PROJECTS ↓',
     hero_btn_cv: 'CV & CONTACT →',
@@ -1378,11 +1382,15 @@ const UI_STRINGS = {
     form_submit: 'SEND MESSAGE ↗'
   },
   vi: {
-    menu_sections_label: '3 PHẦN CHÍNH',
-    nav_s1_title: 'GIỚI THIỆU & SHOWREEL',
-    nav_s2_title: 'THƯ VIỆN DỰ ÁN (20)',
-    nav_s3_title: 'HỒ SƠ CV & LIÊN HỆ',
-    menu_filters_label: 'LỌC NHANH DỰ ÁN',
+    p3_m_leader: 'TRƯỞNG NHÓM',
+    p3_m_reel: 'SHOWREEL',
+    p3_m_all: '20 DỰ ÁN',
+    p3_m_stage: 'STAGE LED',
+    p3_m_comm: 'QUẢNG CÁO',
+    p3_m_brand: 'THƯƠNG HIỆU',
+    p3_m_3d: '3D & MASCOT',
+    p3_m_cv: 'CV & LIÊN HỆ',
+    p3_m_pdf: 'TẢI CV PDF',
     btn_download_cv: 'TẢI CV 2026 (PDF) ↗',
     hero_btn_gallery: 'XEM TOÀN BỘ 20 DỰ ÁN ↓',
     hero_btn_cv: 'HỒ SƠ CV & LIÊN HỆ →',
@@ -1555,9 +1563,8 @@ let heroSlideIdx = 0;
 // DOM References
 const leftMenuSystem = document.getElementById('left-menu-system');
 const leftMenuToggle = document.getElementById('left-menu-toggle');
-const leftMenuDrawer = document.getElementById('left-menu-drawer');
-const drawerCloseBtn = document.getElementById('drawer-close-btn');
-const leftMenuBackdrop = document.getElementById('left-menu-backdrop');
+const leftMenuDrawer = document.getElementById('p3r-popout-menu');
+const p3rFloatItems = document.querySelectorAll('.p3r-float-item');
 
 const gridEl = document.getElementById('projects-grid');
 const filterBtns = document.querySelectorAll('.filter-btn');
@@ -1573,7 +1580,7 @@ function tObj(val) {
 }
 
 // =========================================================================
-// LEFT-SIDE COLLAPSIBLE MENU CONTROLS
+// LEFT-SIDE POP-OUT FLOATING MENU CONTROLS (NON-BLOCKING OVERLAY)
 // =========================================================================
 function setLeftMenuOpen(isOpen) {
   if (!leftMenuSystem || !leftMenuToggle || !leftMenuDrawer) return;
@@ -1588,23 +1595,15 @@ if (leftMenuToggle) {
     setLeftMenuOpen(!isOpen);
   });
 }
-if (drawerCloseBtn) {
-  drawerCloseBtn.addEventListener('click', () => setLeftMenuOpen(false));
-}
-if (leftMenuBackdrop) {
-  leftMenuBackdrop.addEventListener('click', () => setLeftMenuOpen(false));
-}
 
-document.querySelectorAll('.drawer-link').forEach((link) => {
-  link.addEventListener('click', () => setLeftMenuOpen(false));
-});
+p3rFloatItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    p3rFloatItems.forEach((i) => i.classList.remove('active'));
+    item.classList.add('active');
 
-document.querySelectorAll('.drawer-filter-btn').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const cat = btn.dataset.quickFilter || 'all';
-    setCategoryFilter(cat);
-    setLeftMenuOpen(false);
-    document.getElementById('sec-gallery')?.scrollIntoView({ behavior: 'smooth' });
+    if (item.dataset.quickFilter) {
+      setCategoryFilter(item.dataset.quickFilter);
+    }
   });
 });
 
@@ -2057,13 +2056,12 @@ if (commissionForm) {
   });
 }
 
-// Scroll Spy for Left Menu 3 Sections
-const drawerLinks = document.querySelectorAll('.drawer-link');
+// Scroll Spy for Left Pop-Out P3R Floating Menu
 window.addEventListener(
   'scroll',
   () => {
     const scrollY = window.scrollY + window.innerHeight * 0.35;
-    const sectionIds = ['sec-hero', 'sec-gallery', 'sec-cv-contact'];
+    const sectionIds = ['sec-hero', 'hero-showreel-dock', 'sec-gallery', 'sec-cv-contact'];
     let currentId = 'sec-hero';
     sectionIds.forEach((id) => {
       const el = document.getElementById(id);
@@ -2071,8 +2069,13 @@ window.addEventListener(
         currentId = id;
       }
     });
-    drawerLinks.forEach((link) => {
-      link.classList.toggle('active', link.dataset.sec === currentId);
+
+    p3rFloatItems.forEach((item) => {
+      if (currentId === 'sec-gallery' && item.dataset.quickFilter) {
+        item.classList.toggle('active', item.dataset.quickFilter === activeCategory);
+      } else if (item.dataset.sec) {
+        item.classList.toggle('active', item.dataset.sec === currentId && !item.dataset.quickFilter);
+      }
     });
   },
   { passive: true }

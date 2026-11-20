@@ -13,112 +13,120 @@
 <body>
 
   <!-- =====================================================================
-       LEFT-SIDE COLLAPSIBLE PERSONA MENU TOGGLE & DRAWER
+       LEFT-SIDE POP-OUT PERSONA 3 RELOAD FLOATING MENU
+       (No backdrop blur; page remains 100% interactive while menu is open)
        ===================================================================== -->
-  <aside class="left-menu-system" id="left-menu-system" aria-label="Left Side Portfolio Menu">
-    <!-- Fixed Left-Edge Toggle Trigger Button -->
+  <aside class="p3r-side-menu-root open" id="left-menu-system" aria-label="Persona 3 Reload Floating Side Menu">
+
+    <!-- Left-Edge Trigger Icon Button -->
     <button
       type="button"
-      class="left-menu-toggle"
+      class="p3r-menu-trigger"
       id="left-menu-toggle"
-      aria-expanded="false"
-      aria-controls="left-menu-drawer"
-      title="Toggle Navigation Menu"
+      aria-expanded="true"
+      aria-controls="p3r-popout-menu"
+      title="Toggle Persona Floating Menu"
     >
-      <span class="toggle-bars" aria-hidden="true">
+      <span class="trigger-diamond" aria-hidden="true">◆</span>
+      <span class="trigger-bars" aria-hidden="true">
         <span></span><span></span><span></span>
       </span>
-      <span class="toggle-label">MENU</span>
+      <span class="trigger-text">MENU</span>
     </button>
 
-    <!-- Slide-Out Left Persona Command Drawer -->
-    <div class="left-menu-drawer" id="left-menu-drawer" aria-hidden="true">
-      <div class="drawer-header">
-        <div class="drawer-brand">
-          <span class="drawer-diamond" aria-hidden="true">◆</span>
-          <div>
-            <strong>ALDUR HOANG</strong>
-            <small>PERSONA SYSTEM // 2026</small>
-          </div>
+    <!-- Directly Pop-Out Floating P3R Menu (Pointer-events pass through empty space!) -->
+    <div class="p3r-popout-menu" id="p3r-popout-menu" aria-hidden="false">
+
+      <!-- Left Vertical Stencil Edge Accent ("MAIN" + Yen Box from Image 1) -->
+      <div class="p3r-menu-left-wing" aria-hidden="true">
+        <div class="p3r-yen-tag">
+          <strong>¥ 2026</strong>
+          <small>ALDUR.INK</small>
         </div>
-        <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">✕</button>
+        <div class="p3r-vertical-stencil">MAIN</div>
       </div>
 
-      <!-- 3 Main Sections Navigation -->
-      <nav class="drawer-nav" aria-label="3 Main Sections">
-        <span class="drawer-group-title" data-i18n="menu_sections_label">MAIN SECTIONS (3)</span>
+      <!-- Floating 3D-Tilted Stacked Menu Words (Exact P3R Style from Uploaded Images 1 & 2) -->
+      <nav class="p3r-floating-stack" aria-label="Persona 3 Reload Floating Command Stack">
 
-        <a href="#sec-hero" class="drawer-link active" data-sec="sec-hero">
-          <span class="drawer-num">01</span>
-          <div class="drawer-link-copy">
-            <strong data-i18n="nav_s1_title">INFO &amp; SHOWREEL</strong>
-            <small>LEADER STATUS · 2026 REEL</small>
-          </div>
+        <!-- 1. LEADER / HERO -->
+        <a href="#sec-hero" class="p3r-float-item active" data-sec="sec-hero" data-tone="cyan-bright" style="--stagger: 12px; --rot: -10deg;">
+          <span class="p3r-white-shard" aria-hidden="true"></span>
+          <span class="p3r-word" data-text="LEADER" data-i18n="p3_m_leader">LEADER</span>
         </a>
 
-        <a href="#sec-gallery" class="drawer-link" data-sec="sec-gallery">
-          <span class="drawer-num">02</span>
-          <div class="drawer-link-copy">
-            <strong data-i18n="nav_s2_title">PROJECT GALLERY</strong>
-            <small>ALL 20 WORKS &amp; MOTION CLIPS</small>
-          </div>
+        <!-- 2. SHOWREEL -->
+        <a href="#hero-showreel-dock" class="p3r-float-item" data-sec="hero-showreel-dock" data-tone="ice-white" style="--stagger: 26px; --rot: -7deg;">
+          <span class="p3r-white-shard" aria-hidden="true"></span>
+          <span class="p3r-word" data-text="SHOWREEL" data-i18n="p3_m_reel">SHOWREEL</span>
         </a>
 
-        <a href="#sec-cv-contact" class="drawer-link" data-sec="sec-cv-contact">
-          <span class="drawer-num">03</span>
-          <div class="drawer-link-copy">
-            <strong data-i18n="nav_s3_title">CV &amp; CONTACT</strong>
-            <small>EXPERIENCE · SKILLS · FORM</small>
-          </div>
+        <!-- 3. ALL WORKS (SECTION 2 GALLERY) -->
+        <a href="#sec-gallery" class="p3r-float-item" data-sec="sec-gallery" data-quick-filter="all" data-tone="cyan-mid" style="--stagger: 8px; --rot: -9deg;">
+          <span class="p3r-white-shard" aria-hidden="true"></span>
+          <span class="p3r-word" data-text="ALL WORKS" data-i18n="p3_m_all">ALL WORKS</span>
         </a>
+
+        <!-- 4. STAGE LED (FILTER) -->
+        <a href="#sec-gallery" class="p3r-float-item" data-quick-filter="stage-visuals" data-tone="ice-white" style="--stagger: 30px; --rot: -5deg;">
+          <span class="p3r-white-shard" aria-hidden="true"></span>
+          <span class="p3r-word" data-text="STAGE LED" data-i18n="p3_m_stage">STAGE LED</span>
+        </a>
+
+        <!-- 5. MOTION & OOH (FILTER) -->
+        <a href="#sec-gallery" class="p3r-float-item" data-quick-filter="commercial-motion" data-tone="cyan-deep" style="--stagger: 18px; --rot: -8deg;">
+          <span class="p3r-white-shard" aria-hidden="true"></span>
+          <span class="p3r-word" data-text="COMMERCIAL" data-i18n="p3_m_comm">COMMERCIAL</span>
+        </a>
+
+        <!-- 6. BRAND & KV (FILTER) -->
+        <a href="#sec-gallery" class="p3r-float-item" data-quick-filter="brand-identity" data-tone="cyan-bright" style="--stagger: 4px; --rot: -6deg;">
+          <span class="p3r-white-shard" aria-hidden="true"></span>
+          <span class="p3r-word" data-text="BRAND & KV" data-i18n="p3_m_brand">BRAND &amp; KV</span>
+        </a>
+
+        <!-- 7. 3D & MASCOT (FILTER) -->
+        <a href="#sec-gallery" class="p3r-float-item" data-quick-filter="3d-editorial-community" data-tone="ice-white" style="--stagger: 22px; --rot: -4deg;">
+          <span class="p3r-white-shard" aria-hidden="true"></span>
+          <span class="p3r-word" data-text="3D & MASCOT" data-i18n="p3_m_3d">3D &amp; MASCOT</span>
+        </a>
+
+        <!-- 8. CV & CONTACT (SECTION 3) -->
+        <a href="#sec-cv-contact" class="p3r-float-item" data-sec="sec-cv-contact" data-tone="cyan-bright" style="--stagger: 14px; --rot: -3deg;">
+          <span class="p3r-white-shard" aria-hidden="true"></span>
+          <span class="p3r-word" data-text="CV & CONTACT" data-i18n="p3_m_cv">CV &amp; CONTACT</span>
+        </a>
+
+        <!-- 9. SYSTEM / CV PDF -->
+        <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="p3r-float-item" data-tone="cyan-deep" style="--stagger: 28px; --rot: 2deg;">
+          <span class="p3r-white-shard" aria-hidden="true"></span>
+          <span class="p3r-word" data-text="LOAD CV PDF" data-i18n="p3_m_pdf">LOAD CV PDF</span>
+        </a>
+
       </nav>
 
-      <!-- Quick Gallery Filter Shortcuts -->
-      <div class="drawer-filters">
-        <span class="drawer-group-title" data-i18n="menu_filters_label">QUICK GALLERY FILTER</span>
-        <div class="drawer-filter-pills">
-          <button type="button" class="drawer-filter-btn" data-quick-filter="all">All (20)</button>
-          <button type="button" class="drawer-filter-btn" data-quick-filter="stage-visuals">Stage LED (6)</button>
-          <button type="button" class="drawer-filter-btn" data-quick-filter="commercial-motion">Commercial (4)</button>
-          <button type="button" class="drawer-filter-btn" data-quick-filter="brand-identity">Brand &amp; KV (6)</button>
-          <button type="button" class="drawer-filter-btn" data-quick-filter="3d-editorial-community">3D &amp; Editorial (4)</button>
+      <!-- Compact Floating Utility Pills (EN/VI + BGM Toggle) Under the Stack -->
+      <div class="p3r-float-utilities">
+        <div class="lang-switch-pill" role="group" aria-label="Language Switcher">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="vi">VI</button>
         </div>
-      </div>
 
-      <!-- Controls: EN/VI Switcher, BGM Toggle, CV Download -->
-      <div class="drawer-controls">
-        <div class="drawer-control-row">
-          <span class="ctrl-label">LANGUAGE</span>
-          <div class="lang-switch-pill" role="group" aria-label="Language Switcher">
-            <button type="button" class="lang-btn active" data-lang="en">EN</button>
-            <button type="button" class="lang-btn" data-lang="vi">VI</button>
+        <button type="button" id="p3-bgm-toggle" class="p3-bgm-btn playing" aria-label="Toggle Background Music">
+          <div class="bgm-eq-bars" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
           </div>
-        </div>
-
-        <div class="drawer-control-row">
-          <span class="ctrl-label">PERSONA BGM</span>
-          <button type="button" id="p3-bgm-toggle" class="p3-bgm-btn playing" aria-label="Toggle Background Music">
-            <div class="bgm-eq-bars" aria-hidden="true">
-              <span></span><span></span><span></span><span></span>
-            </div>
-            <strong id="bgm-track-status">♪ ON</strong>
-          </button>
-          <audio id="p3-bgm-audio" src="assets/audio/persona3-bgm.wav" autoplay loop preload="auto"></audio>
-        </div>
-
-        <a href="assets/docs/Aldur_Hoang_CV_2026.pdf" target="_blank" rel="noopener" class="drawer-cv-btn">
-          <span data-i18n="btn_download_cv">DOWNLOAD 2026 CV (PDF) ↗</span>
-        </a>
+          <strong id="bgm-track-status">♪ BGM</strong>
+        </button>
+        <audio id="p3-bgm-audio" src="assets/audio/persona3-bgm.wav" autoplay loop preload="auto"></audio>
       </div>
-    </div>
 
-    <!-- Backdrop when drawer is open on mobile/desktop -->
-    <div class="left-menu-backdrop" id="left-menu-backdrop" aria-hidden="true"></div>
+    </div>
   </aside>
 
   <!-- =====================================================================
        SECTION 1: BASIC INFO, INTRO & FEATURED SHOWREEL
-       (Exact Persona 3 Reload LEADER Status Screen Style from Uploaded Image)
+       (Exact Persona 3 Reload LEADER Status Screen Style)
        ===================================================================== -->
   <section id="sec-hero" class="p3r-hero-section" aria-label="Section 1: Basic Info, Intro and Featured Showreel">
     <div class="p3r-stage">
@@ -145,7 +153,7 @@
           <strong>RB</strong><span class="red-chevron">&gt;</span>
         </button>
 
-        <!-- Quick Top EN/VI & Section Jump Pills -->
+        <!-- Quick Top EN/VI Switcher -->
         <div class="p3r-top-quick-pills">
           <button type="button" class="lang-btn active" data-lang="en">EN</button>
           <button type="button" class="lang-btn" data-lang="vi">VI</button>
@@ -174,7 +182,7 @@
       <div class="p3r-diagonal-ribbon-wrap">
         <div class="p3r-diagonal-ribbon">
 
-          <!-- Giant ":3" / ":26" Cutout Number on Far Left -->
+          <!-- Giant ":3" Cutout Number on Far Left -->
           <div class="p3r-giant-number" aria-hidden="true">3</div>
 
           <!-- Inner Black Skewed Top Bar: Name, /PLV 26, HP 20/20 (Cyan), SP 9830/2868 (Yellow-Green), NEXT EXP -->
@@ -254,15 +262,11 @@
       <!-- RIGHT SIDE: MONOCHROME PORTRAIT WITH GLOWING CYAN EYES + CYAN ECHO + RED-CHECKERED "LEADER" BADGE -->
       <div class="p3r-character-column">
         <div class="p3r-portrait-frame">
-          <!-- Cyan Shadow Silhouette Echo Behind Portrait -->
           <img src="assets/images/portrait-hoang.jpg" alt="" class="p3r-portrait-echo" aria-hidden="true" id="p3r-echo-img" />
-          <!-- High-Contrast Monochrome Portrait -->
           <img src="assets/images/portrait-hoang.jpg" alt="Aldur Hoang (Nguyễn Vũ Minh Hoàng) — Leader Portrait" class="p3r-portrait-main" id="p3r-main-img" />
-          <!-- Electric Cyan Eye/ Rim Glow Accent -->
           <div class="p3r-cyan-iris-glow" aria-hidden="true"></div>
         </div>
 
-        <!-- Iconic Red-Checkered Black "LEADER" Badge (Click to cycle portrait) -->
         <button type="button" class="p3r-leader-badge" id="p3r-cycle-portrait-btn" title="Click to switch character / portrait view">
           <span class="leader-checkers" aria-hidden="true">
             <i class="c-red"></i><i></i>
@@ -343,7 +347,6 @@
   <section id="sec-gallery" class="gallery-section" aria-label="Section 2: Complete Project Gallery">
     <div class="container">
 
-      <!-- Section 2 Header & Filter Bar -->
       <div class="sec-header-block">
         <div>
           <span class="p3r-eyebrow-tag" data-i18n="works_eyebrow">SECTION 02 // COMPLETE ARCHIVE (2022 – 2026)</span>
@@ -499,18 +502,14 @@
 
       <!-- CV Experience Timeline + Education & Skills Grid -->
       <div class="experience-bento">
-        <!-- Left Column: Work Experience Timeline -->
         <div class="bento-card timeline-card">
           <h3 class="bento-heading">
             <span class="accent-dot"></span>
             <span data-i18n="exp_timeline_title">Professional Experience (2022 – 2026)</span>
           </h3>
-          <div class="timeline-list" id="timeline-list">
-            <!-- Populated dynamically from data/projects.json -->
-          </div>
+          <div class="timeline-list" id="timeline-list"></div>
         </div>
 
-        <!-- Right Column: Education + Skills + Freelance Ratecard -->
         <div class="bento-side-stack">
           <div class="bento-card">
             <h3 class="bento-heading">
@@ -550,9 +549,7 @@
             <h3 class="subgallery-title" data-i18n="ratecard_heading">2026 Key Visual, 3D &amp; Motion Ratecard</h3>
           </div>
         </div>
-        <div class="zzz-ratecard-grid" id="ratecard-grid">
-          <!-- Populated dynamically from data/projects.json -->
-        </div>
+        <div class="zzz-ratecard-grid" id="ratecard-grid"></div>
       </div>
 
       <!-- Contact Details & Calling Card Form -->

@@ -1597,6 +1597,7 @@ function tObj(val) {
 function setLeftMenuOpen(isOpen) {
   if (!leftMenuSystem || !leftMenuToggle || !leftMenuDrawer) return;
   leftMenuSystem.classList.toggle('open', isOpen);
+  document.body.classList.toggle('menu-open', isOpen);
   leftMenuToggle.setAttribute('aria-expanded', String(isOpen));
   leftMenuDrawer.setAttribute('aria-hidden', String(!isOpen));
 }
